@@ -26,6 +26,13 @@ Lab: User ID controlled by request parameter, with unpredictable user IDs :-
     3. Replace the id in url and "boom" its time for bounttyyyy.
 
 LOGIC USED:- Check every parameter by clicking .
+--------------------------------------------------------------------------
+Lab: User ID controlled by request parameter, with data leakage in redirect:-
 
+    1. Login as wiener
+    2. observe parameter "id=wiener" in url and change it to "id=carlos"
+    3. got a request id=carlos in burp,sent the response and copied the api key
 
-    
+-----------------------------------------------------------------------------------
+
+Lab: 
