@@ -8,12 +8,24 @@ Lab: Method-based access control can be circumvented:-
 LOGIC USED:- 
  1. /admin-roles GET request me upgraded admin ko normal user s replace kro and normal user ka cookie paste krdo and "boom" you are admin now!!!!
 
-
- Lab: User ID controlled by request parameter  
+-----------------------------------------------------------------------------------------
+Lab: User ID controlled by request parameter  
    
     1. Login as wiener
     2. got parameter "id=wiener" in url and change it to "id=carlos"
     3. "boom" you are carlos now and submit the api
 
-LOIGC USED:- 
+LOGIC USED:-
   Sometimes analyse basic things like url also(sometimes they might lead to idor) small misake can lead to big bugs.
+
+-----------------------------------------------------------------------------------------
+Lab: User ID controlled by request parameter, with unpredictable user IDs :-
+    1. Login as wiener
+    2. Go to url and observe some id like abcdhdi1293827893
+    3. Observe the website and click on carlos and get his guid
+    3. Replace the id in url and "boom" its time for bounttyyyy.
+
+LOGIC USED:- Check every parameter by clicking .
+
+
+    
