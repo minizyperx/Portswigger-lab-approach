@@ -1,0 +1,11 @@
+#1 Lab: Method-based access control can be circumvented:-
+ Login as admin
+ 1. ugrade carlos as admin
+ 2. always check request method (modify and check response always)
+ 3. GET request in /admin-roles and carlos ko wiener s replace kro
+ 4. Logout and login as wiener and copy "session cookie of wiener" and paste in "/admin-roles" request of carlos
+
+LOGIC USED:- 
+ 1. /admin-roles GET request me upgraded admin ko normal user s replace kro and normal user ka cookie paste krdo and "boom" you are admin now!!!!
+
+-----------------------------------------------------------------------------------------
