@@ -44,3 +44,21 @@ LOGIC USED:- Check every parameter by clicking .
 
 LOGIC USED:- Improper sanitation of url parameters
 -----------------------------------------------------------------------------------
+
+#6 Lab:Insecure direct object reference :-
+
+    1. Login as wiener
+    2. do live chat and download the transcript
+    3. In burp change /download-transcript/2.txt to /download-transcript/1.txt and got pssword in response
+
+LOGIC USED:- MUST check new features which are rare like *live chat & ai chat*   /
+-----------------------------------------------------------------------------------
+
+#7 Lab:Multi-step process with no access control on one step :-
+
+    1. Login as admin
+    2. Upgrade carlos and "CTRL+R" 
+    3.Login as wiener and "inspect" and replace that cookie in /admin-roles and  change carlos to wiener
+
+LOGIC USED:- Try tampering cookies
+-----------------------------------------------------------------------------------
