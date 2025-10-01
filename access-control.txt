@@ -35,4 +35,12 @@ LOGIC USED:- Check every parameter by clicking .
 
 -----------------------------------------------------------------------------------
 
-#5 Lab: 
+#5 Lab: User ID controlled by request parameter with password disclosure:-    day 3
+
+    1. Login as wiener
+    2. observe parameter "id=wiener" in url and change it to "id=adminstator"
+    3. copy admin password and login as admin
+    4. Delete carlos
+
+LOGIC USED:- Improper sanitation of url parameters
+-----------------------------------------------------------------------------------
