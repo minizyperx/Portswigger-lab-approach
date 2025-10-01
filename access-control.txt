@@ -62,3 +62,14 @@ LOGIC USED:- MUST check new features which are rare like *live chat & ai chat*  
 
 LOGIC USED:- Try tampering cookies
 -----------------------------------------------------------------------------------
+
+#8 Lab:Referer-based access control:- 
+
+    1. Login as admin
+    2. Upgrade carlos
+    3. Login as wiener and copy his cookie
+    4. In burp change referer to /admin-roles and change carlos to wiener and paste wiener cookie in request
+    5. "Boom" you are admin now
+
+LOGIC USED:- Check referer header
+-----------------------------------------------------------------------------------
