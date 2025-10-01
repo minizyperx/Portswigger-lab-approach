@@ -35,7 +35,7 @@ LOGIC USED:- Check every parameter by clicking .
 
 -----------------------------------------------------------------------------------
 
-#5 Lab: User ID controlled by request parameter with password disclosure:-    day 3
+#5 Lab: User ID controlled by request parameter with password disclosure:-    
 
     1. Login as wiener
     2. observe parameter "id=wiener" in url and change it to "id=adminstator"
@@ -71,7 +71,7 @@ LOGIC USED:- Try tampering cookies
     4. In burp change referer to /admin-roles and change carlos to wiener and paste wiener cookie in request
     5. "Boom" you are admin now
 
-LOGIC USED:- Check referer header                                     day 3 done
+LOGIC USED:- Check referer header                                     
 -----------------------------------------------------------------------------------
 
 #9 Lab: Unprotected admin functionality:- 
