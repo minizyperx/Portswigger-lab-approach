@@ -71,5 +71,19 @@ LOGIC USED:- Try tampering cookies
     4. In burp change referer to /admin-roles and change carlos to wiener and paste wiener cookie in request
     5. "Boom" you are admin now
 
-LOGIC USED:- Check referer header
+LOGIC USED:- Check referer header                                     day 3 done
 -----------------------------------------------------------------------------------
+
+#9 Lab: Unprotected admin functionality:- 
+
+    1. Go to robots.txt and got /admin and delete
+
+----------------------------------------------------------------------------------
+
+#10 Lab: Unprotected admin functionality :-
+
+    1. View source code 
+
+----------------------------------------------------------------------------------
+
+Rest 3 labs are easy and not mentioned here
