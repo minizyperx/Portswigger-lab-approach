@@ -1,0 +1,10 @@
+#1 Lab: Excessive trust in client-side control:-
+
+ 1. add jacket to cart
+ 2. turn intercept on and send to repeater
+ 3. remove product from cart and modify price
+ 2. refresh cart page and lab is solved
+ 
+-----------------------------------------------------------------------------------------
+
+#2
