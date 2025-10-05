@@ -1,2 +1,89 @@
+#1 Lab: Method-based access control can be circumvented:-
+ Login as admin
+ 1. ugrade carlos as admin
+ 2. always check request method (modify and check response always)
+ 3. GET request in /admin-roles and carlos ko wiener s replace kro
+ 4. Logout and login as wiener and copy "session cookie of wiener" and paste in "/admin-roles" request of carlos
 
-        
+LOGIC USED:- 
+ 1. /admin-roles GET request me upgraded admin ko normal user s replace kro and normal user ka cookie paste krdo and "boom" you are admin now!!!!
+
+-----------------------------------------------------------------------------------------
+#2 Lab: User ID controlled by request parameter  
+   
+    1. Login as wiener
+    2. got parameter "id=wiener" in url and change it to "id=carlos"
+    3. "boom" you are carlos now and submit the api
+
+LOGIC USED:-
+  Sometimes analyse basic things like url also(sometimes they might lead to idor) small misake can lead to big bugs.
+
+-----------------------------------------------------------------------------------------
+#3 Lab: User ID controlled by request parameter, with unpredictable user IDs :-
+    1. Login as wiener
+    2. Go to url and observe some id like abcdhdi1293827893
+    3. Observe the website and click on carlos and get his guid
+    3. Replace the id in url and "boom" its time for bounttyyyy.
+
+LOGIC USED:- Check every parameter by clicking .
+--------------------------------------------------------------------------
+#4 Lab: User ID controlled by request parameter, with data leakage in redirect:-
+
+    1. Login as wiener
+    2. observe parameter "id=wiener" in url and change it to "id=carlos"
+    3. got a request id=carlos in burp,sent the response and copied the api key
+
+-----------------------------------------------------------------------------------
+
+#5 Lab: User ID controlled by request parameter with password disclosure:-    
+
+    1. Login as wiener
+    2. observe parameter "id=wiener" in url and change it to "id=adminstator"
+    3. copy admin password and login as admin
+    4. Delete carlos
+
+LOGIC USED:- Improper sanitation of url parameters
+-----------------------------------------------------------------------------------
+
+#6 Lab:Insecure direct object reference :-
+
+    1. Login as wiener
+    2. do live chat and download the transcript
+    3. In burp change /download-transcript/2.txt to /download-transcript/1.txt and got pssword in response
+
+LOGIC USED:- MUST check new features which are rare like *live chat & ai chat*   /
+-----------------------------------------------------------------------------------
+
+#7 Lab:Multi-step process with no access control on one step :-
+
+    1. Login as admin
+    2. Upgrade carlos and "CTRL+R" 
+    3.Login as wiener and "inspect" and replace that cookie in /admin-roles and  change carlos to wiener
+
+LOGIC USED:- Try tampering cookies
+-----------------------------------------------------------------------------------
+
+#8 Lab:Referer-based access control:- 
+
+    1. Login as admin
+    2. Upgrade carlos
+    3. Login as wiener and copy his cookie
+    4. In burp change referer to /admin-roles and change carlos to wiener and paste wiener cookie in request
+    5. "Boom" you are admin now
+
+LOGIC USED:- Check referer header                                     
+-----------------------------------------------------------------------------------
+
+#9 Lab: Unprotected admin functionality:- 
+
+    1. Go to robots.txt and got /admin and delete
+
+----------------------------------------------------------------------------------
+
+#10 Lab: Unprotected admin functionality :-
+
+    1. View source code 
+
+----------------------------------------------------------------------------------
+
+Rest 3 labs are easy and not mentioned here
