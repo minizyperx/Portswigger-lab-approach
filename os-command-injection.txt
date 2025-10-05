@@ -25,5 +25,5 @@
 #4 Lab: Blind OS command injection with out-of-band interaction:-
 
   1. repeat step 1 as of lab 3 
-  2. hii
+  2.
 
