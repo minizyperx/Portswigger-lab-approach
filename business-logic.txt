@@ -7,4 +7,10 @@
  
 -----------------------------------------------------------------------------------------
 
-#2
+#2 Lab: High level logic vulnerability:-
+
+ 1. add jacket to cart
+ 2. send /cart to repeater
+ 3. on changing quantity i can see that item can be "negative" also
+ 4. we had coupon of 100$ only so add other item in negative quantity and jacket as "1"
+ 5. purchase and lab is solved
