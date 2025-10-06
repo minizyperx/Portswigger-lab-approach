@@ -14,3 +14,7 @@
  3. on changing quantity i can see that item can be "negative" also
  4. we had coupon of 100$ only so add other item in negative quantity and jacket as "1"
  5. purchase and lab is solved
+
+-----------------------------------------------------------------------------------------
+
+#3 Lab:Inconsistent security controls :-
