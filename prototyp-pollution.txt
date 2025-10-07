@@ -1,0 +1,4 @@
+Prototype pollution are mostly found in :-
+     The URL via either the query or fragment string (hash)
+     JSON-based input
+      Web messages
