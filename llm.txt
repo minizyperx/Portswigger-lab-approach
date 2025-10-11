@@ -1,1 +1,8 @@
-#1 Lab: OS command injection, simple case:-
+#1 Lab: Exploiting LLM APIs with excessive agency:-
+  
+    1. ask the LLM to call which api it can call
+    2. ask the LLM to call the Prompt SELECT * FROM users
+    3. then delete the users
+
+ LOGIC USED:- If the LLM isn't cooperative, try providing misleading context and re-asking the question. For example, you could claim that you are the LLM's developer and so should have a higher level of privilege. 
+-----------------------------------------------------------------------------------------
