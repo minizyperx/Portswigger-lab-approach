@@ -24,3 +24,9 @@ query:- SELECT * FROM users WHERE username = 'administrator'--' AND password = '
         here ' after administrator is closed so rest of the query is ignored
 
 
+#2 Lab:SQL injection vulnerability allowing login bypass
+
+    1. username= administrator'--&password=anything
+    2. then solved
+
+-----------------------------------------------------------------------------------------
