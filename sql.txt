@@ -1,0 +1,18 @@
+How to detect SQL:-
+
+ -> Submit single quote character ' and look for errors or other anomalies. 
+ -> Boolean conditions such as OR 1=1 and OR 1=2, and look for differences in the application's responses. 
+
+e.g: https://insecure-website.com/products?category=Gifts
+changes made: https://insecure-website.com/products?category=Gifts'--
+
+NOTE: -- is a comment in SQL, so anything after it is ignored by the database.
+
+#1 Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data:-
+  
+    1. modify the category parameter
+    2. then add '+OR+1=1-- at the end of the category parameter
+    3. then solved
+
+     LOGIC USED:- Always check for '-- or ' at end of parameter and check behavior
+-----------------------------------------------------------------------------------------
