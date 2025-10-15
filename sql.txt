@@ -16,3 +16,11 @@ NOTE: -- is a comment in SQL, so anything after it is ignored by the database.
 
      LOGIC USED:- Always check for '-- or ' at end of parameter and check behavior
 -----------------------------------------------------------------------------------------
+
+
+If we have only username and want to find password then we can use union attack
+
+query:- SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
+        here ' after administrator is closed so rest of the query is ignored
+
+
