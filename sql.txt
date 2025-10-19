@@ -58,3 +58,8 @@ After you determine the number of required columns, you can probe each column to
 LOGIC USED:- First find number of columns then find which column contains text data by putting 'a'/whatever u have to find in each column one by one
 
 --------------------------------------------------------------------------------------------------
+
+TIP to find password:- ' UNION SELECT username, password FROM users--
+
+#5 Lab: SQL injection UNION attack, retrieving data from other tables
+
