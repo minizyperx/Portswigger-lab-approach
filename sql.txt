@@ -165,3 +165,5 @@ xyz is tracking id
 
 ----------------------------------------------------------------------------------------------
 
+Theory:-  Error-based SQL injection refers to cases where you're able to use error messages to either extract or infer sensitive data from the database.
+
