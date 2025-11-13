@@ -167,3 +167,8 @@ xyz is tracking id
 
 Theory:-  Error-based SQL injection refers to cases where you're able to use error messages to either extract or infer sensitive data from the database.
 
+#10 Lab:Blind SQL injection with conditional errors
+
+    1.trackingid=xyz' (see response for internal error)
+    2.
+
