@@ -13,4 +13,12 @@ In this case, the content type multipart/form-data is preferred.
 
 ----------------------------------------------------------------------------------------------------
 
-#2 Lab:
+#2 Lab: Web shell upload via Content-Type restriction bypass
+
+    1.Upload php shell and turn on the intercepting proxy.
+    2.Change the Content-Type from application/x-php to image/jpeg
+    3. Forward the request and see the response.
+    4. Access the uploaded web shell via browser and execute commands. using /files/avatars/image.php
+
+----------------------------------------------------------------------------------------------------
+
