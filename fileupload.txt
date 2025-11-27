@@ -22,3 +22,14 @@ In this case, the content type multipart/form-data is preferred.
 
 ----------------------------------------------------------------------------------------------------
 
+IMP:- Web servers often use the filename field in multipart/form-data requests to determine the name and location where the file should be saved. 
+
+#3 Lab: Web shell upload via path traversal
+
+    1.change filename from ex.php to ..%2fex.php in the intercepted request.
+    2.Forward the request and see the response.
+    3. Turn off intercept nd inspec on image>open image in new tab
+    4. Change the path of image to files/ex.php
+
+----------------------------------------------------------------------------------------------------
+
