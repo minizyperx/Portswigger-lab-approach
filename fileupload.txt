@@ -33,3 +33,8 @@ IMP:- Web servers often use the filename field in multipart/form-data requests t
 
 ----------------------------------------------------------------------------------------------------
 
+IF php extension is blocked, we can try other extensions like .php5, .shtml, .phtml etc.
+
+#4 Lab: Web shell upload via extension blacklist bypass
+
+    1.avatars/ex.php5
