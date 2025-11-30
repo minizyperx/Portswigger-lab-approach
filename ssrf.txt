@@ -27,3 +27,22 @@
 5. carlos is deleted
 
 -----------------------------------------------------------------------------------------
+
+#4 Lab:SSRF with filter bypass via open redirection vulnerability
+
+1. Check stock and click next product and observe that the path parameter is placed into the Location header of a redirection response
+2. do stockApi=/product/nextProduct?path=http://192.168.0.12:8080/admin
+3. append /delete?username=carlos and send the request then again by removing the appended location
+4. carlos is deleted
+
+-----------------------------------------------------------------------------------------
+
+#5 Lab: Blind SSRF with out-of-band detection
+
+1.go to referrar ,do right click and insert collaborator url in beginning of url add http://
+2. go to collaborator and start polling
+3. if request likr http is rceived then ssrf is there.
+4. solved
+
+-----------------------------------------------------------------------------------------
+
