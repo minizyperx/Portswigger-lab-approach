@@ -8,3 +8,12 @@
 
 -----------------------------------------------------------------------------------------
 
+#2 Lab: Basic SSRF against another back-end system
+
+1. check stock of any prodyct and replace stockid with :- http://192.168.0.1:8080/admin
+2. send to repeater after turning on intercept
+3. add $1$ and run payload from 1 to 255 for checking live host and see whos giving response 200
+4. after finding live host check for carlos location and append the location in stockid and send the request(from the rendered response)
+5. carlos is deleted, remove the appended location after deleting carlos i.e. admin/delete?username=carlos and send the request
+
+-----------------------------------------------------------------------------------------
