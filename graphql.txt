@@ -18,3 +18,10 @@ GraphQL endpoints:- /graphql
      2. Send the request to repeater and check Inql tab
      3. Send blogPost query to repeater 
      4. Then in GraphQL of repeater tab send requet and check variable tab and keep changing id until password comes.
+
+#2 Lab:Accidental exposure of private GraphQL fields
+
+     1.Login as wiener,and capture the graphql request in burp
+     2.Send to repeater,set intropection query  and save graphql request to sitemap
+     3.Then in sitemap open request>graphql>v1 ,select the query of user and send to repeater
+     4.Then in variable tab keep changing id: to get admin data
