@@ -1,0 +1,20 @@
+Before testing GraphQL API, we must first find GraphQL endpoints. 
+TESTING:- If you send query{__typename} to any GraphQL endpoint, it will include the string {"data": {"__typename": "query"}} somewhere in its response. 
+This is known as a universal query, and is a useful tool in probing whether a URL corresponds to a GraphQL service.
+
+GraphQL endpoints:- /graphql
+                    /api
+                    /api/graphql
+                    /graphql/api
+                    /graphql/graphql
+
+ If these common endpoints don't return a GraphQL response, you could also try appending /v1 to the path. 
+
+ TOOL USED:- Clairvoyance is a tool that uses suggestions to automatically recover all or part of a GraphQL schema.
+
+ #1 Lab:Accessing private GraphQL posts
+
+     1. Intall InQl extension from BAPP store.
+     2. Send the request to repeater and check Inql tab
+     3. Send blogPost query to repeater 
+     4. Then in GraphQL of repeater tab send requet and check variable tab and keep changing id until password comes.
