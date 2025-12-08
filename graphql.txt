@@ -25,3 +25,13 @@ GraphQL endpoints:- /graphql
      2.Send to repeater,set intropection query  and save graphql request to sitemap
      3.Then in sitemap open request>graphql>v1 ,select the query of user and send to repeater
      4.Then in variable tab keep changing id: to get admin data
+
+#3 Lab:Finding a hidden GraphQL endpoint
+
+     1. Try appending /api in url and see response
+     2. send to intruder and add payloads graphql ,api/graphql ,graphql/api ,/v1,graphql/graphql etc
+     3. In one output u will get query not found means graphql is present
+     3. In repeataer after GET /api add ?query=query{__typename} 
+     4. send query{__typename} to graphql and intropection
+     5. send to sitemap and in api send second request to repeataer then open grapql in repeataer
+     5. send the first request set id is 3 and solved
