@@ -26,6 +26,8 @@ GraphQL endpoints:- /graphql
      3.Then in sitemap open request>graphql>v1 ,select the query of user and send to repeater
      4.Then in variable tab keep changing id: to get admin data
 
+---------------------------------------------------------------------------------------------------
+
 #3 Lab:Finding a hidden GraphQL endpoint
 
      1. Try appending /api in url and see response
@@ -34,4 +36,15 @@ GraphQL endpoints:- /graphql
      3. In repeataer after GET /api add ?query=query{__typename} 
      4. send query{__typename} to graphql and intropection
      5. send to sitemap and in api send second request to repeataer then open grapql in repeataer
-     5. send the first request set id is 3 and solved
+     6. send the first request set id is 3 and solved
+
+--------------------------------------------------------------------------------------------------
+
+Bypassing rate limiting using aliases means Aliases allow multiple operations in one request
+ and Rate limiting often counts requests, not operations. 
+
+ MAINLY USED IN CASES WHERE RATE LIMIT IS APPLIED AND WE CANT SEND LOT OF REQUETS.
+
+#4 Lab:Bypassing GraphQL brute force protections
+
+     1.

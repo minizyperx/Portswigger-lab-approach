@@ -1,0 +1,16 @@
+RACE CONDITION can be found in:
+      
+       
+    Redeeming a gift card multiple times
+    Rating a product multiple times
+    Withdrawing or transferring cash in excess of your account balance
+    Reusing a single CAPTCHA solution
+    Bypassing an anti-brute-force rate limit
+
+#1 Lab:
+
+     1.Add coupon code and send POST /cart/coupon to repeataer
+     2.Send to turbo intruder and select race single packet attack
+     3.Stop the attack and go to cart and remove the coupon then again attack
+     4. still too expensive ,remove coupon from cart and again attack (keep trying until success)
+     5. finally u will get success response and check cart for applied coupon
