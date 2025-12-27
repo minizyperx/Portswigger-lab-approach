@@ -7,10 +7,23 @@ RACE CONDITION can be found in:
     Reusing a single CAPTCHA solution
     Bypassing an anti-brute-force rate limit
 
-#1 Lab:
+#1 Lab:Limit overrun race conditions
 
      1.Add coupon code and send POST /cart/coupon to repeataer
      2.Send to turbo intruder and select race single packet attack
      3.Stop the attack and go to cart and remove the coupon then again attack
      4. still too expensive ,remove coupon from cart and again attack (keep trying until success)
      5. finally u will get success response and check cart for applied coupon
+
+-----------------------------------------------------------------
+
+
+#2 Lab: Bypassing rate limits via race conditions
+
+     1.Enter wrong password and submit login form
+     2.Capture request in burp repeater and make 20 requests and send parallel attack for group
+     3.Send requests to turbo intruder and change password to %s and username to carlos
+     4.In payload do select 
+                 for word in wordlists.clipboard:
+                    engine.queue(target.req,word, gate='race1')
+     5.Copy the passwordlist and run the attack and youre done.
