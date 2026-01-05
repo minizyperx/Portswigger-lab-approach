@@ -27,3 +27,40 @@ RACE CONDITION can be found in:
                  for word in wordlists.clipboard:
                     engine.queue(target.req,word, gate='race1')
      5.Copy the passwordlist and run the attack and youre done.
+
+-----------------------------------------------------------------
+
+#3 Lab: Multi-endpoint race conditions
+
+     1. Add a giftcard to cart and place order
+     2.Go to burp and send POST /cart and POST /cart/checkout to repeater
+     3. Add both request to group and send single attack for first
+     NOTE:- race window between order is validated to order is confirmed
+     4. In first request change productId=1 so that it can add leather jacket in cart
+     5. After sending request remove leather jacket from cart
+     6. Send both request in parallel , follow redirection and lab is solved
+
+-----------------------------------------------------------------
+
+#4 Lab: Single-endpoint race conditions
+
+     1.change mail once and intercept the request
+     2.send the request to repeater two times
+     3.In second request change mail to carlos@ginandjuice.shop
+     4. do parallel attack for both request
+     5. finally check the mailbox and lab is solved
+
+-----------------------------------------------------------------
+
+#5 Lab: Exploiting time-sensitive vulnerabilities
+
+     1.Go to forgot password and send both GET and POST request to repeater
+     2.In GET request remove the phpsessid and send the req
+     3.Make a duplicate of POST request
+     4. Sebd both post request in grp and do parallel attack
+     5. will notice that time taken for both request is difft it means the server is taking them as sequence requets.
+     6. In the second post request change the phpsessid to the one generated in get request and change to carlos(generat another php sessid again)
+     7. check the mail and copy the forgot password link, and ther change username=carlos
+     8. It it shows invalid token the do the parallel attack again until success.
+
+-----------------------------------------------------------------     
