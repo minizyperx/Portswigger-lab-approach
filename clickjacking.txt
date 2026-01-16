@@ -1,0 +1,3 @@
+A web user accesses a decoy website (perhaps this is a link provided by an email) and clicks on a button to win a prize. 
+Unknowingly, they have been deceived by an attacker into pressing an alternative hidden button and this results in the payment of an account on another site. 
+This is an example of a clickjacking attack.

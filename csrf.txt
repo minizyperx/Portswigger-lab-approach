@@ -1,0 +1,9 @@
+#1 Lab: CSRF vulnerability with no defenses
+
+    1. login as wiener
+    2. intercept the request of changing email and change email 
+    3. generate csrf poc at that point
+    4.copy poc and send to exploit server
+    5. change email and send exploit and lab is solved
+
+-----------------------------------------------------------------------------------------
