@@ -1,0 +1,11 @@
+#1 Lab:Authentication bypass via OAuth implicit flow
+
+    1. Go to OAuth lab
+    2. Click on Login with OAuth
+    3. Send POST/authnticate request to repeater
+    4. Change email to victim's email
+    5. Send request and you are logged in as victim
+
+-----------------------------------------------------------------------------------------
+
+#2 Lab:

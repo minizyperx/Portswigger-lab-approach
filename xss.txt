@@ -1,0 +1,19 @@
+Reflected XSS:- It arises when an application receives data in an HTTP request 
+                and includes that data within the immediate response in an unsafe way.
+
+#1 Lab: Reflected XSS into HTML context with nothing encoded.
+
+       Use basic xss payloads like <script>alert(1)</script> in search box.
+
+-----------------------------------------------------------------------------------------
+
+TIP:-         Test every entry point.
+              Submit random alphanumeric values
+
+#2 Lab: Stored XSS into HTML context with nothing encoded
+
+       1.basic payloads like <script>alert(1)</script> in comment section
+
+-----------------------------------------------------------------------------------------
+
+#3 Lab: DOM XSS in document.write sink using source location.search

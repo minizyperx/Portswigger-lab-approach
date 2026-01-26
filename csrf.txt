@@ -7,3 +7,18 @@
     5. change email and send exploit and lab is solved
 
 -----------------------------------------------------------------------------------------
+
+#2 Lab: CSRF where token validation depends on request method
+
+    1. Login as wiener
+    2. Intercept the request of changing email and change email
+    3. Change request method from POST to GET
+    4. Generate CSRF POC at that point
+    5. Copy POC and send to exploit server
+    6. Change email and send exploit and lab is solved
+
+-----------------------------------------------------------------------------------------
+
+#3 Lab: CSRF where token is not tied to user session
+
+    1.
