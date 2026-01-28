@@ -45,6 +45,13 @@ Bypassing rate limiting using aliases means Aliases allow multiple operations in
 
  MAINLY USED IN CASES WHERE RATE LIMIT IS APPLIED AND WE CANT SEND LOT OF REQUETS.
 
-#4 Lab:Bypassing GraphQL brute force protections
+#4 Lab:Bypassing GraphQL brute force protections(use when login parameter is graphql and bruteforce is blocked)
 
-     1.
+     1.Look for common graphql endpoints and send to repeater
+     2.Go to graphql visualizer and send the intropection response  to visualizer
+     3.Go to Target>sitemap>select the graphql request>v1>select the "too many incorrect attempts one" and send to repeater
+     4.Copy the payload and paste in console of browser dev tool 
+
+
+     TIP:- Learnt new thing that pasting payload in console can also bruteforce passwords
+
