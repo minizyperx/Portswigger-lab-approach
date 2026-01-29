@@ -55,3 +55,7 @@ Bypassing rate limiting using aliases means Aliases allow multiple operations in
 
      TIP:- Learnt new thing that pasting payload in console can also bruteforce passwords
 
+#5 Lab:Performing CSRF exploits over GraphQL
+
+     1.
+
