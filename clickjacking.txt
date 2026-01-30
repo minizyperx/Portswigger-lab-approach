@@ -1,3 +1,17 @@
 A web user accesses a decoy website (perhaps this is a link provided by an email) and clicks on a button to win a prize. 
 Unknowingly, they have been deceived by an attacker into pressing an alternative hidden button and this results in the payment of an account on another site. 
 This is an example of a clickjacking attack.
+
+Clickjacking attacks use CSS to create and manipulate layers.
+
+
+VVI TIP:- Agar website m "CSP" ya "xframe options" na ho to clickjacking ka attack ho skta h.
+
+
+#1 Lab:-  Basic clickjacking with CSRF token protection
+
+      1. Go to exploit server of lab and add target url in iframe
+      2. Add some css to hide iframe
+      3. Match the button position of target website with "delete" button
+
+-------------------------------------------------------------------------------
