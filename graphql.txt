@@ -55,7 +55,21 @@ Bypassing rate limiting using aliases means Aliases allow multiple operations in
 
      TIP:- Learnt new thing that pasting payload in console can also bruteforce passwords
 
+---------------------------------------------------------------------------------------------------
+
+TIP:-  POST requests  of application/json are secure against forgery as long as the content type is validated.
+       Alternative methods such as GET, or any request that has a content type of x-www-form-urlencoded 
+       can be sent by a browser and so may leave users vulnerable to attack if the endpoint accepts these requests. 
+       Where this is the case, attackers may be able to craft exploits to send malicious requests to the API. 
+
 #5 Lab:Performing CSRF exploits over GraphQL
 
-     1.
+     1.Change email and capture the request in burp
+     2.Send to repeater and change request method and again change method it'll get back to POST
+     3.In request add the grahql query and variables in urlencoded format
+     4.Send the request and email will get changed
+     5.Again change the email and send the CSRF exploit from html form in browser
+     6.Again change mail in CSRF exploit and login as victim to see changed email
+
+---------------------------------------------------------------------------------------------------
 
