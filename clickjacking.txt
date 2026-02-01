@@ -5,7 +5,7 @@ This is an example of a clickjacking attack.
 Clickjacking attacks use CSS to create and manipulate layers.
 
 
-VVI TIP:- Agar website m "CSP" ya "xframe options" na ho to clickjacking ka attack ho skta h.
+VVI TIP:- Agar website m "CSP" ya "xframe options" aur "frame busting" na ho to clickjacking ka attack ho skta h.
 
 
 #1 Lab:-  Basic clickjacking with CSRF token protection
@@ -25,3 +25,14 @@ NOTE:-  For clickjacking , use Burp's Clickbandit tool.
        3.Done
 
 -------------------------------------------------------------------------------
+
+#3 Lab:- Clickjacking with a frame buster script
+
+      1. Go to exploit server of lab and add target url in iframe add <iframe sandbox ="allow-forms" just above that line
+
+
+      TIP:- Frame buster script prevent from loading website in iframe but if we use sandbox="allow-forms" then it will allow to load website in iframe.
+
+------------------------------------------------------------------------------- 
+
+kav
