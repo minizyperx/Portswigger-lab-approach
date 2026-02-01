@@ -15,3 +15,13 @@ VVI TIP:- Agar website m "CSP" ya "xframe options" na ho to clickjacking ka atta
       3. Match the button position of target website with "delete" button
 
 -------------------------------------------------------------------------------
+
+NOTE:-  For clickjacking , use Burp's Clickbandit tool.
+
+#2 Lab:- Clickjacking with form input data prefilled from a URL parameter.
+
+       1. Go to exploit server of lab and add target url in iframe and append my-account?email=hacker@attacker-website.com
+       2. Add some css to hide iframe
+       3.Done
+
+-------------------------------------------------------------------------------
