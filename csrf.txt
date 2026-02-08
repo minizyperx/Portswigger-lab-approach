@@ -21,4 +21,4 @@
 
 #3 Lab: CSRF where token is not tied to user session
 
-    1.
+    1.login as wiener
