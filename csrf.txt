@@ -21,4 +21,9 @@
 
 #3 Lab: CSRF where token is not tied to user session
 
+
+
     1.login as wiener
+
+
+    BUG:-mtlb agar hum apna csrf token kisi aur ko die aur wo uss csrf ko use krk login krta h to mtlb CSRF token session s connected nhi h

