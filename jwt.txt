@@ -6,3 +6,13 @@
      4.Now the user is deleted.
 
 ----------------------------------------------------------------------------------------------------------
+
+#2 Lab: JWT authentication bypass via flawed signature verification
+
+     1.Capture /my-account and send to repeater and append /admin in url
+     2.Change the sub=wiener to sub=administrator in jwt token
+     3.Change the alg from HS256 to none using "Json web token" >attack > modify jwt token>select none in alg and click on update
+     4.Will get 200 OK response ,now modify request as GET /admin/delete?username=carlos
+     5.Now the user is deleted.
+     
+-------------------------------------------------------------------------------------------
