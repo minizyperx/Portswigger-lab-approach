@@ -178,5 +178,5 @@ Jinja2 - Python/Flask Template engine
     then cat my_password.txt and submit the answer.
 
 ----------------------------------------------------------------------------------------------------------------------------------
-
+to find ssti :- LOOK FOR REFLECTION OF OUR USER-CONTROLLED INPUT
 PREVENTION OF SSTI:- The best way to prevent server-side template injection is to not allow any users to modify or submit new templates
