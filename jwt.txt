@@ -28,3 +28,13 @@
 
 JWT secret list:- https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list
 IMP TIP:-HS256 means it's using same secret key for both generating token and validating it.
+
+#4 Lab: JWT authentication bypass via jwk header injection
+
+     1.change the path to /admin and send the request.
+     2. Click new RSA key in JWT Editors Keys tab in burp main tab bar.
+     3. Click New RSA Key and click Generate to automatically generate a new key pair, then click OK to save the key. 
+     4. Go back to the GET /admin request in Burp Repeater and switch to the extension-generated JSON Web Token tab and change the value of the sub claim to administrator.
+     5. Click Attack at bottom of JSON Web Token then select Embedded JWK and select newly generated RSA key and click OK.
+     6.In the header of the JWT, observe that a jwk parameter has been added containing your public key.
+     7.Noww user id deleted.
