@@ -16,3 +16,15 @@
      5.Now the user is deleted.
      
 -------------------------------------------------------------------------------------------
+
+#3 Lab:JWT authentication bypass via weak signing key
+
+     1.use cmd hashcat -a 0 -m 16500 'jwttoken' /root/Desktop (path of jwt secret list) to crack the jwt token and get the secret key .
+     2.Enter secret key in decode and base64 encode the secret key 
+     3. Generate new id in jwt editor and change key to base64 encoded secret key and click on update
+     4.Now modify request as GET /admin/delete?username=carlos
+     5.Now the user is deleted.
+
+
+JWT secret list:- https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list
+IMP TIP:-HS256 means it's using same secret key for both generating token and validating it.
