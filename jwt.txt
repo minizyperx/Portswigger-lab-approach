@@ -25,9 +25,12 @@
      4.Now modify request as GET /admin/delete?username=carlos
      5.Now the user is deleted.
 
+-------------------------------------------------------------------------------------------------
 
 JWT secret list:- https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list
 IMP TIP:-HS256 means it's using same secret key for both generating token and validating it.
+
+-------------------------------------------------------------------------------------------------
 
 #4 Lab: JWT authentication bypass via jwk header injection
 
@@ -38,3 +41,12 @@ IMP TIP:-HS256 means it's using same secret key for both generating token and va
      5. Click Attack at bottom of JSON Web Token then select Embedded JWK and select newly generated RSA key and click OK.
      6.In the header of the JWT, observe that a jwk parameter has been added containing your public key.
      7.Noww user id deleted.
+
+-----------------------------------------------------------------------------------------------------
+
+#5 Lab:JWT authentication bypass via jku header injection
+
+     1.Go to JWT editors tab and generate a new RSA key pair and save it.
+     2. Then copy that public key as JWK key
+     3. Store in exploit server and replace the kid value in exploit server from the generated one in repeater .
+     4. In json web token of repeater , go to JWS>>Header and add jku parameter with url of exploit server where public key is stored and click on sign.
