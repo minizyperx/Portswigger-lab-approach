@@ -50,3 +50,4 @@ IMP TIP:-HS256 means it's using same secret key for both generating token and va
      2. Then copy that public key as JWK key
      3. Store in exploit server and replace the kid value in exploit server from the generated one in repeater .
      4. In json web token of repeater , go to JWS>>Header and add jku parameter with url of exploit server where public key is stored and click on sign.
+     5.
