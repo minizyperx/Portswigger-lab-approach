@@ -2,3 +2,21 @@ Prototype pollution are mostly found in :-
      The URL via either the query or fragment string (hash)
      JSON-based input
      Web messages
+
+
+#1 Lab: Client-side prototype pollution via browser APIs
+
+     1.Open the lab in chromium and turn on dom invader
+     2.Open inspect and go to dom invader and scan for exploits.
+     3.Click on vulnerable code and click on exploit ,lab is solved.
+
+--------------------------------------------------------------------------------------------
+
+#2 Lab:DOM XSS via client-side prototype pollution
+ 
+     1.Open the lab in chromium and turn on dom invader
+     2.Open inspect and go to dom invader and scan for exploits.
+     3.Click on vulnerable code and click on exploit ,lab is solved.
+     4.Or add ?__proto__[transport_url]=data:,alert(1) in url and lab is solved.
+
+--------------------------------------------------------------------------------------------
