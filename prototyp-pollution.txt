@@ -20,3 +20,7 @@ Prototype pollution are mostly found in :-
      4.Or add ?__proto__[transport_url]=data:,alert(1) in url and lab is solved.
 
 --------------------------------------------------------------------------------------------
+
+#3 Lab: DOM XSS via an alternative prototype pollution vector
+
+     1.Open the lab
