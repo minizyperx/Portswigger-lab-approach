@@ -24,3 +24,4 @@ Prototype pollution are mostly found in :-
 #3 Lab: DOM XSS via an alternative prototype pollution vector
 
      1.Open the lab
+     2.
