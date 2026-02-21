@@ -23,5 +23,15 @@ Prototype pollution are mostly found in :-
 
 #3 Lab: DOM XSS via an alternative prototype pollution vector
 
-     1.Open the lab
-     2. step 2
+     1.In url append ?__proto__.evil=polluted   
+     2. Open console and type Object.prototype ,we can see that object prototype contains our injected property
+     this means we have found the prototype pollution source.
+     3.Go to "searchlogger page" its place where this vuln arises
+
+     Method 2:-
+
+     1.Open the lab in chromium and turn on dom invader
+     2.Open inspect and go to dom invader and scan for exploits.
+     3.Click on vulnerable code and click on exploit ,and append - in payload and lab is solved.
+
+--------------------------------------------------------------------------------------------
