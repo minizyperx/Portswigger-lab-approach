@@ -3,11 +3,16 @@ Prototype pollution are mostly found in :-
      JSON-based input
      Web messages
 
-
-     HOW TO CHECK FOR PROTOTYPE POLLUTION:-
-     **Append ?__proto__[color]=red   in url**
-     and check resources loaded in "Network" tab and look for "js" files
-     then enter:- Object.
+  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  |   HOW TO CHECK FOR PROTOTYPE POLLUTION:-                                                                                                                              |
+  |  **Append ?__proto__[color]=red   in url**                                                                                                                            |
+  |   and check resources loaded in "Network" tab and look for "js" files                                                                                                 |
+  |   then in console enter:- Object.prototype                                                                                                                            |
+  |   hit enter and you'll see that the object prototype contains our injected property "color" with value "red" if its vulnerable else no property will be there         |
+  |                                                                                                                                                                       |                   
+  |   Payload 2:- ?constructor.prototype.polluted=true                                                                                                                    |                                                                                                               |
+  |   then in console enter:- Object.prototype                                                                                                                            |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|                                                                                                                           |
 
 
 #1 Lab: Client-side prototype pollution via browser APIs
