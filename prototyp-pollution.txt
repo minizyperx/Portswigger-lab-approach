@@ -4,6 +4,12 @@ Prototype pollution are mostly found in :-
      Web messages
 
 
+     HOW TO CHECK FOR PROTOTYPE POLLUTION:-
+     **Append ?__proto__[color]=red   in url**
+     and check resources loaded in "Network" tab and look for "js" files
+     then enter:- Object.
+
+
 #1 Lab: Client-side prototype pollution via browser APIs
 
      1.Open the lab in chromium and turn on dom invader
