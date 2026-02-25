@@ -60,4 +60,15 @@ Prototype pollution are mostly found in :-
 
 #5 Lab: Client-side prototype pollution in third-party libraries
 
-     1.
+     1.open lab in chromium and turn on dom invader
+     2.Open console and see Object.prototype and see that it's injected
+     3.create new object by:- let myObj = {}                                                                                                                               |
+  |    then:- myObj.testproperty (checks whether it has inherited the property or not) 
+     4.click on stack trace then click on latest link in console , it'll redirect to vulnerable code
+     5. Now craft payload and send to victim.
+
+     Payload:- <script>
+               location = "https://0ac700be04b7a3b68030d161002b001f.web-security-academy.net/#_proto_[hitCallback]=alert%28document.cookie%29";
+               </script>
+
+---------------------------------------------------------------------------------------------------
