@@ -12,6 +12,9 @@ Prototype pollution are mostly found in :-
   |                                                                                                                                                                       |                   
   |   Payload 2:- ?constructor.prototype.polluted=true                                                                                                                    |                                                                                                               |
   |   then in console enter:- Object.prototype                                                                                                                            |
+  |                                                                                                                                                                       |
+  |   create new object by:- let myObj = {}                                                                                                                               |
+  |                    then:- myObj.testproperty (checks whether it has inherited the property or not)                                                                    |                                                              |
   |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|                                                                                                                           |
 
 
@@ -54,3 +57,7 @@ Prototype pollution are mostly found in :-
      3.Click on vulnerable code and click on exploit.
 
 --------------------------------------------------------------------------------------------
+
+#5 Lab: Client-side prototype pollution in third-party libraries
+
+     1.
