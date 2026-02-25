@@ -62,8 +62,8 @@ Prototype pollution are mostly found in :-
 
      1.open lab in chromium and turn on dom invader
      2.Open console and see Object.prototype and see that it's injected
-     3.create new object by:- let myObj = {}                                                                                                                               |
-  |    then:- myObj.testproperty (checks whether it has inherited the property or not) 
+     3.create new object by:- let myObj = {}                                                                                                                               
+     then:- myObj.testproperty (checks whether it has inherited the property or not) 
      4.click on stack trace then click on latest link in console , it'll redirect to vulnerable code
      5. Now craft payload and send to victim.
 
@@ -72,3 +72,7 @@ Prototype pollution are mostly found in :-
                </script>
 
 ---------------------------------------------------------------------------------------------------
+
+#6 Lab: Privilege escalation via server-side prototype pollution
+
+     1.
