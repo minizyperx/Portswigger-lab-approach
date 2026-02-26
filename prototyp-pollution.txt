@@ -84,3 +84,22 @@ Prototype pollution are mostly found in :-
      4.Send the request and check the response and you'll see that isAdmin is now true which means we have successfully done prototype pollution and now we can access admin panel.
 
 ---------------------------------------------------------------------------------------------------
+
+#7 Lab: Detecting server-side prototype pollution without polluted property reflection
+
+     1. Login and change country and capture the request
+     2. Add "__proto__":{ 
+    "isAdmin":true
+     } to the request and remove the comma in above line
+     3.Send the request and you'll some error status like 400 or 500
+     4.Add  "__proto__":{ 
+    "status":532
+     } to the request and remove the comma in above line
+     5.Send the request and you'll see that status is now 532 which means we have successfully done prototype pollution.
+
+     LOGIC:- If the website is vulnerable to prototype pollution then it'll add the status property to the object prototype and it'll override the default status code of 200 to 532 which means we have successfully done prototype pollution.
+             We can use this method to show that website is vulnerable to prototype pollution even if it doesn't reflect the polluted property in response.
+
+--------------------------------------------------------------------------------------------------------
+
+#8 
