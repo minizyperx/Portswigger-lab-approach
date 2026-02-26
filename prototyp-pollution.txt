@@ -73,6 +73,14 @@ Prototype pollution are mostly found in :-
 
 ---------------------------------------------------------------------------------------------------
 
-#6 Lab: Privilege escalation via server-side prototype pollution
+#6 Lab: Privilege escalation via server-side prototype pollution(priviledge escalation so we must modify to change from normal user to admin)
 
-     1.
+     1. Login and change country and capture the request
+     2.Send to repeater and you'll see a parameter called "isAdmin" with value "false"
+     3.Try to do  prototype pollution by adding the below parameter 
+     "__proto__":{ 
+    "isAdmin":true
+    }
+     4.Send the request and check the response and you'll see that isAdmin is now true which means we have successfully done prototype pollution and now we can access admin panel.
+
+---------------------------------------------------------------------------------------------------
