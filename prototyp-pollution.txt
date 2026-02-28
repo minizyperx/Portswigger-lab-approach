@@ -5,6 +5,8 @@ Prototype pollution are mostly found in :-
 
   |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   |   HOW TO CHECK FOR PROTOTYPE POLLUTION:-                                                                                                                              |
+  |   Mostly in node js applications                                                                                                                                      |
+  |   Can be checked by server side extension in burp or manually                                                                                                         |
   |  **Append ?__proto__[color]=red   in url**                                                                                                                            |
   |   and check resources loaded in "Network" tab and look for "js" files                                                                                                 |
   |   then in console enter:- Object.prototype                                                                                                                            |
@@ -14,7 +16,7 @@ Prototype pollution are mostly found in :-
   |   then in console enter:- Object.prototype                                                                                                                            |
   |                                                                                                                                                                       |
   |   create new object by:- let myObj = {}                                                                                                                               |
-  |                    then:- myObj.testproperty (checks whether it has inherited the property or not)                                                                    |                                                              |
+  |                    then:- myObj.testproperty (checks whether it has inherited the property or not)                                                                    |                                                              
   |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|                                                                                                                           |
 
 
@@ -113,3 +115,7 @@ Prototype pollution are mostly found in :-
      3. Change polluted by isAdmin and send the request and check the response and you'll see that isAdmin is now true which means we have successfully done prototype pollution and now we can access admin panel.
 
 --------------------------------------------------------------------------------------------------------
+
+#9 Lab: Remote code execution via server-side prototype pollution
+
+     1.
