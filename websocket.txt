@@ -1,0 +1,20 @@
+It is used when live interaction is there between client and server. 
+It is a protocol which provides full duplex communication channel over a single TCP connection. 
+It is used in real time web applications. 
+It is used in **chat applications, online gaming, live sports updates,** etc. 
+It allows the server to send data to the client without the client having to request it. 
+It is more efficient than HTTP for real-time communication because it reduces the overhead of establishing a new connection for each request.
+
+
+difference between HTTP and WebSockets:::::-----
+
+->> HTTP: The client sends a request and the server returns a response. Typically, the response occurs immediately, and the transaction is complete. Even if the network connection stays open, this will be used for a separate transaction of a request and a response.
+
+->>WebSocket: Here connections are initiated over HTTP and are typically long-lived. Messages can be sent in either direction at any time and are not transactional in nature. The connection will normally stay open and idle until either the client or the server is ready to send a message.
+
+#1 Lab: Manipulating WebSocket messages to exploit vulnerabilities
+
+     1. Intercept live chat using burp suite web socket history
+     2. Send <img src=1 onerror='alert(1)'>,it's getting encoded
+     3. Turn on intercept and send <img src=1 onerror='alert(1)'>, and forward the request 
+     4. Lab is solved.
