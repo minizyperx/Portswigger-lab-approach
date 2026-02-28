@@ -102,4 +102,14 @@ Prototype pollution are mostly found in :-
 
 --------------------------------------------------------------------------------------------------------
 
-#8 
+#8 Lab: Bypassing flawed input filters for server side prototype pollution
+
+     1. Login and change country and capture the request
+     2. Add "constructor":{
+               "prototype":{
+               "polluted":true
+          }
+     }  now we got that it's reflecting that polluted is true
+     3. Change polluted by isAdmin and send the request and check the response and you'll see that isAdmin is now true which means we have successfully done prototype pollution and now we can access admin panel.
+
+--------------------------------------------------------------------------------------------------------
