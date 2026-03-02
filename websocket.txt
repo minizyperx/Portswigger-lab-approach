@@ -19,6 +19,8 @@ difference between HTTP and WebSockets:::::-----
      3. Turn on intercept and send <img src=1 onerror='alert(1)'>, and forward the request 
      4. Lab is solved.
 
+-------------------------------------------------------------------------------------------------------------
+
 #2 Lab: Manipulating WebSocket messages to exploit vulnerabilities
 
      1.
