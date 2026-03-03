@@ -23,4 +23,13 @@ difference between HTTP and WebSockets:::::-----
 
 #2 Lab: Manipulating WebSocket messages to exploit vulnerabilities
 
-     1.
+     1. Intercept the live chat using burp suite web socket history
+     2  Send any message and turn intercept on and sent the message  
+     3. Change the message in repeater to <img src=1 onerror='alert(1)'> and forward the request
+     4. Lab is solved.
+
+TIP:- This is used in conditions like MITM attack, where the attacker can intercept and manipulate the messages being sent between the client and server. 
+By sending a malicious payload, such as an XSS attack, the attacker can exploit vulnerabilities in the application and potentially gain unauthorized access or execute arbitrary code on the victim's machine. 
+It is important to properly validate and sanitize user input to prevent such attacks.
+
+--------------------------------------------------------------------------------------------------------------
