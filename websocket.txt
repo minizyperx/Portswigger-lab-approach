@@ -33,3 +33,5 @@ By sending a malicious payload, such as an XSS attack, the attacker can exploit 
 It is important to properly validate and sanitize user input to prevent such attacks.
 
 --------------------------------------------------------------------------------------------------------------
+
+#3 Lab: 
