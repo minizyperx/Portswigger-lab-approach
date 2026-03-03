@@ -34,4 +34,20 @@ It is important to properly validate and sanitize user input to prevent such att
 
 --------------------------------------------------------------------------------------------------------------
 
-#3 Lab: 
+#3 Lab: Cross-site WebSocket hijacking
+
+     1. Do a chat and clear the websocket history and do chat again
+     2. Will see a READY message in web socket history
+     3. Copy its url ,generat a payload and send it to victim by sending response to burp collaborator
+     4. Collaborator will receive the request and u can see the chats and password,now login with leaked creds
+
+
+FLOW of message:- Me-> Server ->> Victim ->> Server ->> Me
+
+--------------------------------------------------------------------------------------------------------------
+
+
+TO minimize impact of WebSocket vulnerabilities, it is important to implement proper security measures such as:
+
+using secure WebSocket connections (wss://) to encrypt data in transit
+
