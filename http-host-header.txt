@@ -1,1 +1,10 @@
-Whenever you go for password reset ,it'll have one unique token
+Whenever you go for password reset ,it'll have one unique token try getting token of another user and append in url 
+
+#1 Lab:- Basic password reset poisoning
+
+     1. Click on forgot password then send POST /forgot password to repeater.
+     2. Enter your name in forgot password and turn intercept on 
+     3. Replace content of "Host:" by our exploit address so that we can get the request
+     4. Then do another request by changing name to carlos
+     5. Copy evrything from wiener url and change the token with carlos's from access log
+        
