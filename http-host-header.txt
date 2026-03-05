@@ -1,0 +1,1 @@
+Whenever you go for password reset ,it'll have one unique token
