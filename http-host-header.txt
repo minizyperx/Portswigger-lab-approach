@@ -7,4 +7,12 @@ Whenever you go for password reset ,it'll have one unique token try getting toke
      3. Replace content of "Host:" by our exploit address so that we can get the request
      4. Then do another request by changing name to carlos
      5. Copy evrything from wiener url and change the token with carlos's from access log
+
+--------------------------------------------------------------------------------------------------------
         
+#2 Lab:- Host header authentication bypass
+
+     1. Capture get request of login page and send to repeater ,you'll see robots.txt
+     2. Try appending /admin to url and send request ,you'll get it's available to local users only
+     3. Change Host header to localhost and send request again ,you'll get admin page
+     4. Delete the user now.
