@@ -16,3 +16,14 @@ Whenever you go for password reset ,it'll have one unique token try getting toke
      2. Try appending /admin to url and send request ,you'll get it's available to local users only
      3. Change Host header to localhost and send request again ,you'll get admin page
      4. Delete the user now.
+
+------------------------------------------------------------------------------------------------------------
+
+#3 Lab:- Routing-based SSRF
+
+     1.in url appnd /admin and forward request to intruder
+     2.change host to !92.168.0.$0$ and send request to intruder and payload from 1 to 254 (until the update host header option)
+     3.Got admin ip then append /delete in url ,send the request and change host to localhost and forward request in repeater
+     4.User is deleted now.
+
+------------------------------------------------------------------------------------------------------------
