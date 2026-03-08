@@ -26,3 +26,12 @@
 
 -----------------------------------------------------------------------------------------
 
+#4 Lab: Flawed enforcement of business rules
+
+     1. Add jacket to cart and send request to repeater
+     2. Add coupon to cart and apply coupon thn sign up to newsletter and send request to repeater
+     3. Keep switching between both coupons and observe that you can get reduce in amount of jacket,repeat this process until you get jacket for free
+     4. Purchase the jacket and lab is solved
+
+
+------------------------------------------------------------------------------------------
