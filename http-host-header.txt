@@ -27,3 +27,16 @@ Whenever you go for password reset ,it'll have one unique token try getting toke
      4.User is deleted now.
 
 ------------------------------------------------------------------------------------------------------------
+
+#4 Lab: Host validation bypass via connection state attack
+
+     1. Capture request of Home page
+     2. Send to repeater and change path to /admin and Host to 192.168.0.1 and send the request
+     3. Duplicate the tab, then add both tabs to a new group
+     4. In first tab change path back to / and Host header to lab-id ,send both attack in sequence in single connection 
+     5. In second tab you'll get csrf token , view that tab in browser and send request of that i.e /admin/delete to repeater
+     6. Copy the ip in host from second tab and paste it in third tab and remove the second tab ,now send both tabs as single connection attack
+
+LOGIC:- based on time to leave 
+
+---------------------------------------------------------------------------------------------------------------------
