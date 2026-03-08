@@ -18,3 +18,11 @@
 -----------------------------------------------------------------------------------------
 
 #3 Lab:Inconsistent security controls :-
+
+
+     1. Try opening admin page and you'll get 403 forbidden
+     2. Register as new user and change email ending with  @dontwannacry.com(employee email)
+     3. Login with that user and try opening admin page again and you'll get access to admin page
+
+-----------------------------------------------------------------------------------------
+
