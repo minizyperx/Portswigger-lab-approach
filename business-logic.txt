@@ -43,4 +43,7 @@
      3. Maximum we can change the quantity is to 99 only but if we change the value to 100 and send the request, you'll see Invalid request
      4. Frward the request to intruder and in payloads use null payload and select "Continue indefinitely" and in "Resource pool" create new resource pool and set maximum cuncurrent request to 1 and start attack
      5. After some time you'll see that quantity of jacket is very high and keep doing attack until value becomes negative then pause the request
-     6. Again start the attack and 
+     6. Divid price of all jackets / one jacket then divide the output by /99 and generate that particular number of payloads so that price will be under 100$ and if there's issue then in repeater send requests manually to see the change in price 
+     7. Add another item and send its request from repeater to change the total price under 100$ and purchase the items and lab is solved
+
+---------------------------------------------------------------------------------------------------------
