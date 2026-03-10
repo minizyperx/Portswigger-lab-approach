@@ -38,4 +38,9 @@
 
 #5 Lab: Low-level logic flaw
 
-     1.
+     1. Send Post /cart rquest to repeater and add jacket to cart
+     2. In repeater change the product value to 2 and send the request,you'll see that quantity of jacket is 2
+     3. Maximum we can change the quantity is to 99 only but if we change the value to 100 and send the request, you'll see Invalid request
+     4. Frward the request to intruder and in payloads use null payload and select "Continue indefinitely" and in "Resource pool" create new resource pool and set maximum cuncurrent request to 1 and start attack
+     5. After some time you'll see that quantity of jacket is very high and keep doing attack until value becomes negative then pause the request
+     6. Again start the attack and 
