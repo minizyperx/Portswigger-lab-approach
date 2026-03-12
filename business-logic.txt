@@ -47,3 +47,23 @@
      7. Add another item and send its request from repeater to change the total price under 100$ and purchase the items and lab is solved
 
 ---------------------------------------------------------------------------------------------------------
+
+#6 Lab:  Insufficient workflow validation
+
+     1. Add any item below credit and buy that item
+     2. While ordering it's only confirming via a parameter "cart/order-confirmation?order-confirmed=true"
+     3. Order the jacket and send the request to repeater and change parameter from ?err=INSUFFICIENT_FUNDS to the above parameter.
+     4. Lab is solved
+
+TIP:- Always notice the parameters in the url 
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
