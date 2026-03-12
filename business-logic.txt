@@ -80,3 +80,11 @@ TIP:- Always notice the parameters in the url
 
 LOGIC:- Hiding company mail in long mail string and using that mail to login to admin panel
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#9 Lab: Lab: Weak isolation on dual-use endpoint
+
+     1. Change password of wiener and send that request to repeater
+     2. Remove the current password parameter and change username to admin
+     3. Logged in as admin and lab is solved
+
+--------------------------------------------------------------------------------------------------------------------
