@@ -67,17 +67,16 @@ TIP:- Always notice the parameters in the url
 
 -----------------------------------------------------------------------------------------------------
 
-#8 Lab: 
+#8 Lab: Inconsistent handling of exceptional input
+
+     1. Try logging as username@dontwannacry.com but unable to login as that.
+     2. Register with any cred and snd that req to repeater and change mail to mail of given lab starting with @exploit.... and send request to intruder
+     3. Add payload on $attacker$ then select payload type as Character blocks and select :-
+        min length =100 ,max length =500 and step = 100 and start attack
+     4. Go to mail and you'll see that you got those mails and login from those mails 
+     5. In email use A as 238 times then append @dontwannacry.com.exploit-0a9000e9046c8f5083ee8bc801b1000e.exploit-server.net to it and login with that email and password of your registered user and lab is solved
+     6. Admin panel is now accessible with that email and password
 
 
-
-
-
-
-
-
-
-
-
-
+LOGIC:- Hiding company mail in long mail string and using that mail to login to admin panel
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
