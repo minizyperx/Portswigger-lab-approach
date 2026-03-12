@@ -55,7 +55,21 @@
      3. Order the jacket and send the request to repeater and change parameter from ?err=INSUFFICIENT_FUNDS to the above parameter.
      4. Lab is solved
 
-TIP:- Always notice the parameters in the url 
+TIP:- Always notice the parameters in the url
+
+---------------------------------------------------------------------------------------------------------
+
+#7 Lab: Authentication bypass via flawed state machine
+
+     1. Turn on the intercept and send the Post /login request 
+     2. Forward it and drop the /role selector,remove the appended things in url in browser
+     3. refresh the page and got the admin panel access
+
+-----------------------------------------------------------------------------------------------------
+
+#8 Lab: 
+
+
 
 
 
