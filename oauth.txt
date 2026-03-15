@@ -28,3 +28,4 @@ Host: oauth-authorization-server.com
     7. Store and deliver exploit to victim
 
     logic: in csrf attach im attaching my oauth token to victim account and when victim clicks the link his account is linked to my oauth profile
+

