@@ -46,3 +46,7 @@ IF php extension is blocked, we can try other extensions like .php5, .shtml, .ph
 
 
 -------------------------------------------------------------------------------------------------------
+
+#5 Lab: Web shell upload via obfuscated file extension
+
+    1. 

