@@ -1,1 +1,9 @@
 Agar header mein "X-Cache ya kuch cache related likha h to mtlb website data cache m store kr rhi h.
+
+#1 Lab: Exploiting path mapping for web cache deception
+
+     1. Send /my-account request to repeater and add abc.js after my-account/ and see the cache hit in response \
+     2. Go to exploit server ,craft the payload and instead of abc.js change it to something else and visit the  url and you got the api key.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
