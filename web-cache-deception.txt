@@ -7,3 +7,20 @@ Agar header mein "X-Cache ya kuch cache related likha h to mtlb website data cac
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Web cache deception lab delimiter list:- https://gist.github.com/hanzalaghayasabbasi/fb3100dfc62fec0253a0d2f0a8905fc5
+
+#2 Lab: Exploiting path delimiters for web cache deception
+
+      1. Send /my-account request to repeater and add abc after it i.e /my-accountabc and see the cache hit in response
+      2. Go to intruder and put paylaods on abc and use the above list and turn off payload encoding 
+      3. Notice that ; and ? receive a 200 rsponse with API key , This indicates that the origin server uses ; and ? as path delimiters.
+      4. Add the ? character after /my-account and add a static file extension to the path. For example, update the path to /my-account?abc.js.
+        Repeat this test using the ; character instead of ?. Notice that the response contains the X-Cache: miss header.
+      5. Resend the request and notice that the value of the X-Cache header changes to hit.
+         This indicates that the cache doesn't use ; as a path delimiter and has a cache rule based on the .js static extension. You can use this payload for an exploit.
+      6. Go to exploit server and craft the payload and after /my-account add parameter like ;abc.js and visit the  url and you got the api key.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
