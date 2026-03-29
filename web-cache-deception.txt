@@ -1,4 +1,5 @@
 Agar header mein "X-Cache ya kuch cache related likha h to mtlb website data cache m store kr rhi h.
+Basically agar kc=uch ulta pulta krne p cach store kr rha h yaani cache hit ho rha h to iska matlab website vulnerable h web cache deception attack ke liye.
 
 #1 Lab: Exploiting path mapping for web cache deception
 
@@ -24,3 +25,15 @@ Web cache deception lab delimiter list:- https://gist.github.com/hanzalaghayasab
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+
+SAMPLE PAYLOADS:
+   
+     1. /profile to /static/..%2fprofile
+     2. /profile to /aaa/..%2fprofile
+     3. /assets/js/stockCheck.js to /aaa/..%2fassets/js/stockCheck.js
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+#3 Lab: Exploiting origin server normalization for web cache deception
+
+      1.  Send
