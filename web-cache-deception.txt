@@ -36,4 +36,10 @@ SAMPLE PAYLOADS:
 
 #3 Lab: Exploiting origin server normalization for web cache deception
 
-      1.  Send
+      1. Send /my-account request to repeater and add abc.js after my-account/ and see whether there's cache hit in response.
+      2. Then notice a request named /resources/js/tracking.js and send to repeater and check that you'll see X-Cache in response
+      3. Modify /my account request by /resources/..%2fmy-account?a=ab.js and copy url and paste to exploit server and visit the url and you got the api key.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+TIP:- See for requests where "X-Cache" is present in response and check for cache hit and then try to manipulate the url to get the data.
