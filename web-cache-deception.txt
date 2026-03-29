@@ -43,3 +43,24 @@ SAMPLE PAYLOADS:
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 TIP:- See for requests where "X-Cache" is present in response and check for cache hit and then try to manipulate the url to get the data.
+
+#4 Lab: Exploiting cache server normalization for web cache deception
+
+      1. Send /my-account request to repeater and add abc.js after my-account/ and see whether there's cache hit in response.
+      2. Then modify it by /my-account%23%2f%2e%2e%2fresources?qa and keep adding or removing %2f,%2e, %23 and see the response and check for cache hit in response.
+      3. Then go to exploit server and craft the payload and after /my-account add %23%2f%2e%2e%2fresources?qa and visit the url and you got the api key.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Preventing web cache deception vulnerabilities
+
+You can take a range of steps to prevent web cache deception vulnerabilities:
+
+    Always use Cache-Control headers to mark dynamic resources, set with the directives no-store and private.
+    Configure your CDN settings so that your caching rules don't override the Cache-Control header.
+    Activate any protection that your CDN has against web cache deception attacks. Many CDNs enable you to set a cache rule that verifies that the response Content-Type matches the request's URL file extension. For example, Cloudflare's Cache Deception Armor.
+    Verify that there aren't any discrepancies between how the origin server and the cache interpret URL paths.
