@@ -115,3 +115,7 @@ Prototype pollution are mostly found in :-
      3. Change polluted by isAdmin and send the request and check the response and you'll see that isAdmin is now true which means we have successfully done prototype pollution and now we can access admin panel.
 
 --------------------------------------------------------------------------------------------------------
+
+#9 Lab: Remote code execution via server-side prototype pollution
+
+     1.

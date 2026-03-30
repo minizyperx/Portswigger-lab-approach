@@ -1,0 +1,20 @@
+HOW TO FIND CORS VULNERABILITIES
+
+REQUEST 
+
+GET /sensitive-victim-data HTTP/1.1
+Host: vulnerable-website.com
+Origin: https://malicious-website.com
+Cookie: sessionid=...
+
+It then responds with:
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: https://malicious-website.com
+Access-Control-Allow-Credentials: true
+...
+
+THEN IT's A CORS VULNERABILITY!
+
+#1 Lab: CORS vulnerability with basic origin reflection
+
+ 
