@@ -15,6 +15,11 @@ Access-Control-Allow-Credentials: true
 
 THEN IT's A CORS VULNERABILITY!
 
+Check for "Access-Control-Allow-Credentials" agar ye hai to CORS is there
+
 #1 Lab: CORS vulnerability with basic origin reflection
 
- 
+     1. Send /accountDetails to repeater
+     2. Change the Origin header to https://evil.com ( Origin : https://evil.com )
+     3. Send the request and check the response for Access-Control-Allow-Origin: https://evil.com
+     4. Craft the payload and send to exploit server and access the api key from access logs.
