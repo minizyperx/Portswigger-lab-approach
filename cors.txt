@@ -90,3 +90,36 @@ https://subdomain.vulnerable-website.com/?xss=<script>cors-stuff-here</script>
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
+
+REQUEST:-
+
+Host: vulnerable-website.com
+Origin: http://trusted-subdomain.vulnerable-website.com
+
+RESPONSE:-
+
+Access-Control-Allow-Origin: http://trusted-subdomain.vulnerable-website.com
+Access-Control-Allow-Credentials: true
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+#3 Lab: CORS vulnerability with trusted insecure protocols
+
+     1. Send /accountDetails to repeater
+     2. Change the Origin header to http://trusted-subdomain.labid.com but in real replace labid by vulnerable-website.com ( Origin : http://trusted-subdomain.vulnerable-website.com )
+     3. The vulnerable part is "Check stock" 
+     4. Send the payload and submit the api key to exploit server and access the api key from access logs.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+REQUEST:-
+
+GET /reader?url=doc1.pdf 
+Host: intranet.normal-website.com 
+Origin: https://normal-website.com
+
+RESPONSE:-
+
+HTTP/1.1 200 OK Access-Control-Allow-Origin: *
+
+--------------------------------------------------------------------------------------------------------------------------------------
