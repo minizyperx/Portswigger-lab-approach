@@ -3,7 +3,7 @@
 
  Most HTTP request smuggling vulnerabilities arise because the HTTP/1 specification provides two different ways to specify where a request ends: 
  
- the Content-Length header and the Transfer-Encoding header. 
+ The Content-Length header and the Transfer-Encoding header. 
 
 Content Length header :- it specifies the length of the message body in bytes
 Transfer-Encoding header:- can be used to specify that the message body uses chunked encoding
@@ -21,4 +21,4 @@ TIP:- Use HTTP Rquest Smuggler extension.
 
 #1 Lab: HTTP request smuggling, basic CL.TE vulnerability
 
-     1.
+     1. send
