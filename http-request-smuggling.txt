@@ -21,4 +21,4 @@ TIP:- Use HTTP Rquest Smuggler extension.
 
 #1 Lab: HTTP request smuggling, basic CL.TE vulnerability
 
-     1. send
+     1. send request
