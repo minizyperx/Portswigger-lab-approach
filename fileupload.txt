@@ -49,4 +49,8 @@ IF php extension is blocked, we can try other extensions like .php5, .shtml, .ph
 
 #5 Lab: Web shell upload via obfuscated file extension
 
-    1. 
+    1. Upload a normal image and see the response.
+    2. Look for my-account/avatar and send to repeater, AND in filename change it to "ex.php%00.jpg"  (using %00 cus uske baad jo v likha jaata h wo ignore kar diya jaata h) and send the request.
+    3. in browser access the uploaded web shell via appending files/avatars/ex.php to lab url
+
+-------------------------------------------------------------------------------------------------------
