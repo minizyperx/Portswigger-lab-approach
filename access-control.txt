@@ -86,4 +86,9 @@ LOGIC USED:- Check referer header
 
 ----------------------------------------------------------------------------------
 
-Rest 3 labs are easy and not mentioned here
+#11 Lab: User ID controlled by request parameter with data leakage in redirect 
+
+      1. Login as wiener
+      2. Change id=carlos from id=wiener in url and got api key in response
+      3. Submit the solution
+

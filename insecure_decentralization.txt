@@ -13,6 +13,7 @@ This can be interpreted as follows:
 The native methods for PHP serialization are serialize() and unserialize(). 
 If you have source code access, you should start by looking for unserialize() anywhere in the code and investigating further
 
+----------------------------------------------------------------------------------------------------------
 
 #1 Lab: Modifying serialized object
  
@@ -34,3 +35,7 @@ If you have source code access, you should start by looking for unserialize() an
     4. After modifying the cookie, we can see that we are logged in as administrator and we can access the admin panel on /admin path
 
 ----------------------------------------------------------------------------------------------------
+
+#3 Lab: Using application functionality to exploit insecure deserialization
+
+    
