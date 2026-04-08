@@ -16,4 +16,9 @@ If you have source code access, you should start by looking for unserialize() an
 
 #1 Lab: Modifying serialized object
  
-    1. 
+    1. Turn intercept on, change email and send req to repeater.
+    2. analyze the cookie and see admin from 0 to 1 and change back to base64.
+    3. Modify the cookie in the chrome cookie section and its solved.
+
+
+----------------------------------------------------------------------------------------------------
