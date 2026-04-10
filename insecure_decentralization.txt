@@ -62,4 +62,12 @@ If you have source code access, you should start by looking for unserialize() an
       3. Copy the o/p in place of cookie and url encode and send the request and lab is solved
 
 --------------------------------------------------------------------------------------------------------------------------------------
- 
+
+#6 Lab:  Exploiting PHP deserialization with a pre-built gadget chain
+
+      1. Send the request to repeater and decode the cookie to base64
+      2. In cookie change the username to carlos and encode again as base64 and paste it in place of cookie
+      3. In wsl run:-
+            cd phpggc
+             ./phpggc Symfony/RCE4 exec 'rm /home/carlos/morale.txt' | base64 -w 0
+      4. Copy the token and go to laburl/cgi-bin/phpinfo.php and collect secret from there
