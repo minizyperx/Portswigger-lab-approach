@@ -29,3 +29,6 @@ Host: oauth-authorization-server.com
 
     logic: in csrf attach im attaching my oauth token to victim account and when victim clicks the link his account is linked to my oauth profile
 
+#3 Lab: SSRF via OpenID dynamic client registration
+
+    1.
