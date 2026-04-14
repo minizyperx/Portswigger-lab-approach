@@ -181,3 +181,4 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
 
 gfg
 .......
+-----
