@@ -16,4 +16,5 @@ TIP:-         Test every entry point.
 
 -----------------------------------------------------------------------------------------
 
-#3 Lab: DOM XSS in document.write sink using source location.search
+#3 Lab: Stored XSS into onclick event with angle brackets and double quotes HTML-encoded 
+        and single quotes and backslash escaped
