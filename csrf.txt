@@ -40,4 +40,13 @@ Common defences against CSRF:-
     3. Copy POC and send to exploit server and change the email and send exploit and lab is solved
 
 ---------------------------------------------------------------------------------------------------
+
+#4 Lab: CSRF where token is not tied to user session
+
+    1. Login as wiener and in private tab login as carlos
+    2. copy csrf token of carlos and in csrf poc change the csrf token to carlos's csrf token,also enter any random email
+    3. Csrf token refreshes again so copy from carlos again n again until its solved
+
     BUG:-mtlb agar hum apna csrf token kisi aur ko die aur wo uss csrf ko use krk login krta h to mtlb CSRF token session s connected nhi h
+
+---------------------------------------------------------------------------------------------------
