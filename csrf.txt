@@ -58,3 +58,16 @@ Common defences against CSRF:-
     3. Then search anything and append %0d%0aSet-Cookie:%20csrfKey=csrfkeyofcarlos%3b%20SameSite=None"
     4. In poc ,enter csrf value of carlos and csrf key of carlos and change email to any random email 
     4. Then generate CSRF POC and copy and send to exploit server & send exploit and lab is solved
+
+
+--------------------------------------------------------------------------------------------------------
+
+#6 Lab: CSRF where token is duplicated in cookie
+
+    1. Login as wiener and send /change-email to repeater
+    2. Observe the behaviour by removing the csrf token 
+    3. Generate CSRF poc and in csrf section enter any fake csrf token and change email to any random email .
+    4. Search anything and append /?search=test%0d%0aSet-Cookie:%20csrf=fake%3b%20SameSite=None
+    5. Copy POC and send to exploit server & send exploit and lab is solved
+
+---------------------------------------------------------------------------------------------------------
