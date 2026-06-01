@@ -50,3 +50,11 @@ Common defences against CSRF:-
     BUG:-mtlb agar hum apna csrf token kisi aur ko die aur wo uss csrf ko use krk login krta h to mtlb CSRF token session s connected nhi h
 
 ---------------------------------------------------------------------------------------------------
+
+#5 Lab: CSRF where token is tied to non-session cookie
+
+    1. Login as wiener and in private tab login as carlos.
+    2. First try switching only csrf key and then csrf token and then try to change both
+    3. Then search anything and append %0d%0aSet-Cookie:%20csrfKey=csrfkeyofcarlos%3b%20SameSite=None"
+    4. In poc ,enter csrf value of carlos and csrf key of carlos and change email to any random email 
+    4. Then generate CSRF POC and copy and send to exploit server & send exploit and lab is solved
