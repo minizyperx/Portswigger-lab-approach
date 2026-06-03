@@ -60,3 +60,12 @@ If u find any of the above things in the source code of the website then there i
       https://lab-id.web-security-academy.net/post?postId=4&url=https://exploit-id.exploit-server.net/
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+#5 Lab: DOM-based cookie manipulation
+
+    1. document.cookie = 'lastViewedProduct=' + window.location + '; SameSite=None; Secure'
+     this window.location is vulnerable to DOM XSS attack 
+     and we can manipulate the cookie value by appending xss tags and lab is solved.
+
+
+----------------------------------------------------------------------------------------------------------------------------------
