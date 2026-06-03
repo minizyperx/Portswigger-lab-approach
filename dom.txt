@@ -50,3 +50,13 @@ If u find any of the above things in the source code of the website then there i
     and lab is solved.
 
 -------------------------------------------------------------------------------------------------------------------------------
+
+#4 Lab: DOM-based open redirection
+
+    1. The blog post page contains the following link, which returns to the home page of the blog:
+    <a href='#' onclick='returnURL' = /url=https?:\/\/.+)/.exec(location); if(returnUrl)location.href = returnUrl[1];else location.href = "/"'>Back to Blog</a>
+    we can change the Back to Blog link to redirect to any website by appending /#url=http://evil.com to the lab URL and lab is solved.
+    2. Payload :-
+      https://lab-id.web-security-academy.net/post?postId=4&url=https://exploit-id.exploit-server.net/
+
+---------------------------------------------------------------------------------------------------------------------------------
