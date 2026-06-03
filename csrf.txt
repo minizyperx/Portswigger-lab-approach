@@ -104,3 +104,7 @@ Lax SameSite restrictions mean that browsers will send the cookie in cross-site 
     4. Then send the exploit and lab is solved
 
 ----------------------------------------------------------------------------------------------------------
+
+#9 Lab: SameSite Strict bypass via sibling domain
+
+    1. 
