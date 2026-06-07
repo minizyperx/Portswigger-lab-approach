@@ -69,3 +69,14 @@ If u find any of the above things in the source code of the website then there i
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+#6 Lab: Exploiting DOM clobbering to enable XSS
+
+    1. Check the source-code and you'll get some dom related js files
+    2. In the comment section enter the following payload and lab is solved.
+       <a id= defaultAvatar><a id=defaultAvatar name=avatar href="cid:&quot;onerror=alert(1);//">
+    3.CID is content id isko emai m agar khin image attach krna h to iska use krte h taaki location specify kr ske ki khn p wo image jaega
+    4.In the above payload we've specified cid as quot and when it'll look for quot it'll not find it and 
+    then we've mentioned that onerror which means if not found then return output as alert(1) and then we have mentioned // to comment out the rest of the code and lab is solved.
+
+-----------------------------------------------------------------------------------------------------------------------------------
