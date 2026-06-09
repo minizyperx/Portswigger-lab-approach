@@ -24,6 +24,9 @@
 
 #4 Lab: Blind OS command injection with out-of-band interaction:-
 
-  1. repeat step 1 as of lab 3 
-  2.
+  1. Email parameter is vulnerable to command injection 
+  2. At end of email id append ||nslookup+burp-collaboratorid||
+  3. Forward the request and turn intercept off and check for dns interaction in burp collaborator and lab is solved.
+
+------------------------------------------------------------------------------------------
 
