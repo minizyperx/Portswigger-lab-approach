@@ -18,3 +18,9 @@ TIP:-         Test every entry point.
 
 #3 Lab: Stored XSS into onclick event with angle brackets and double quotes HTML-encoded 
         and single quotes and backslash escaped
+
+      1. https://foobar.com/?&#39;+alert()+&#39;
+       it's separating ' everywhere with backslash and encoding < and > with html entities
+      2. So we're encoding the < ' and > in html encoding and escaping ' with backslash and lab is solved.
+
+-----------------------------------------------------------------------------------------
