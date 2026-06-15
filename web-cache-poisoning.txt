@@ -16,3 +16,16 @@
     4. When cache gets hit you will see the alert in victim's browser
 
 ----------------------------------------------------------------------------------------------
+
+#3 Lab: Web cache poisoning with multiple headers
+
+    1. Send / to repeater
+    2. Add cache buster in request and the main benefit of cache buster is that it'll affect only me not other live users
+    3. Send request /?cb=cachebuster-hdakhfj to repeater and check paraminer for headers
+    4. Add new header "X-Forwarded-Scheme: https and send the request
+    5. Check paraminer and add new header X-Forwarded-Host: ex.com and send the request
+    6. Send /resources/js/tracking.js to repeater and add cache buster nd both headers in it
+    7. Add exploit server url in X-Forwarded-Host and send the request
+    8. Remove cache buster from the request and send the request until cache gets hit and in exploit server change path to /resources/js/tracking.js and save alert(document.cookie) and send the request until cache gets hit
+
+------------------------------------------------------------------------------------------------------
