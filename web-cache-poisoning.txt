@@ -29,3 +29,13 @@
     8. Remove cache buster from the request and send the request until cache gets hit and in exploit server change path to /resources/js/tracking.js and save alert(document.cookie) and send the request until cache gets hit
 
 ------------------------------------------------------------------------------------------------------
+
+#4 Lab: Targeted web cache poisoning using an unknown header
+
+    1. Send / to repeater and check for headers using paraminer
+    2. Got new header X-Host and paste exploit server url in it and send the request
+    3. In response we can see it's showing missing user agent
+    4. Do any comment <img src="https://YOUR-EXPLOIT-SERVER-ID.exploit-server.net/foo" /> and see the activity logs of exploit server
+    5. Copy User-agent from there and paste in request and send the request
+
+-----------------------------------------------------------------------------------------------
