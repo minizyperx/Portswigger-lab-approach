@@ -7,3 +7,12 @@
     5. When cache gets hit you will see the alert with cookie in victim's browser
 
 ---------------------------------------------------------------------------------------------
+
+#2 Lab: Web cache poisoning with an unkeyed cookie
+
+    1. Send / to repeater
+    2. Modify the parameter fehost="-alert(1)-" and send the request
+    3. Open page in browser and keep refreshing until cache gets hit
+    4. When cache gets hit you will see the alert in victim's browser
+
+----------------------------------------------------------------------------------------------
