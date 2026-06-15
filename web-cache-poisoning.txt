@@ -49,3 +49,11 @@
     5. Keep refreshing the page until cache gets hit and you will see the alert in victim's browser
 
 ---------------------------------------------------------------------------------------
+
+#6 Lab: Web cache poisoning via an unkeyed query parameter
+
+    1. Used paraminer on home page and got utm_content was missing
+    2. Add that in home request  /?utm_content='/><script>alert(1)</script> keep sending until cache gets hit
+    3. After it gets stored in cache remove it and open in browser and it's solved.
+
+------------------------------------------------------------------------------------------
