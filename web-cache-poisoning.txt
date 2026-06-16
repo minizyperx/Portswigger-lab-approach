@@ -57,3 +57,14 @@
     3. After it gets stored in cache remove it and open in browser and it's solved.
 
 ------------------------------------------------------------------------------------------
+
+#7 Lab: Parameter cloaking
+
+    1. Capture GET /js/geolocate.js?callback=setCountryCookie request
+    2. Then add &cb=cachebuster-hudkfew after CountryCookie then add Origin cachebuster
+    3. Send the request and check paraminer for headers and send the request
+    4. Modify after CountryCookie to &utm_content=foo&callback=alert(1)
+    5. Change alert value and remove utm thing
+    6. Remove Origin and change alert value back to 1 and keep sending until cache gets re hit and it's solved
+
+----------------------------------------------------------------------------------
