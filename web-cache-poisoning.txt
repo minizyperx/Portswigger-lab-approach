@@ -68,3 +68,13 @@
     6. Remove Origin and change alert value back to 1 and keep sending until cache gets re hit and it's solved
 
 ----------------------------------------------------------------------------------
+
+#8 Lab: Web cache poisoning via a fat GET request
+
+    1. Capture GET /js/geolocate.js?callback=setCountryCookie request
+    2. Add another Origin header with value cachebuster and send the request
+    3. In query try adding another callback with alert payload but it wont work because of the length of the request and cache will not store it
+    4. Show non printable char(\r\n) and add callback=alert(1) at the last line
+    5. Keep sending request until cache gets hit and it's solved
+
+---------------------------------------------------------------------------------
