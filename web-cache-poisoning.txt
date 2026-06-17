@@ -109,3 +109,11 @@ If u see above headers in response then it means that the page is cacheable and 
     4. Copy the url from burp itself  and deliver to victim and lab is solved.
 
 ---------------------------------------------------------------------------------------------------
+
+#11 Lab: Combining web cache poisoning vulnerabilities
+
+    1. Capture GET / request
+    2. Add cache buster in request and check for headers in paraminer
+    3. Add new header "X-Forwarded-Host": exploit.id and send the request
+    4. In exploit page change /exploit to /resources/json/translations.json & in head add Access-Control-Allow-Origin: *
+    5. in payloadd add all data from translation.js and change filetype to json instead of javascript in exploit head

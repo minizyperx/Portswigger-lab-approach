@@ -1,0 +1,7 @@
+#1 Lab: Broken brute-force protection, multiple credentials per request
+
+    1. Send Post /login request to repeater
+    2. In password field enter list of passwords separated by new line and send the request
+    3. See 302 response and show response in browser and you will be logged in with correct password
+
+--------------------------------------------------------------------------------------------------------
