@@ -101,11 +101,11 @@ If u see above headers in response then it means that the page is cacheable and 
 
 ---------------------------------------------------------------------------------------------------
 
-
-
-#9 Lab: URL normalization
+#10 Lab: URL normalization
 
     1. Capture GET / request
     2. Url encode / which gets converted into %2f and send the request
     3. Append  <script>alert(1)</script> after %2f and send the request
-    4. Copy the url and deliver to victim and lab is solved.
+    4. Copy the url from burp itself  and deliver to victim and lab is solved.
+
+---------------------------------------------------------------------------------------------------
