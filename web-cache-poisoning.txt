@@ -1,3 +1,9 @@
+Cache Control: max-age
+X-Cache: miss
+Age: 0
+
+If u see above headers in response then it means that the page is cacheable and we can perform web cache poisoning attack on it.
+
 #1 Lab: Web cache poisoning with an unkeyed header
 
     1. Send / to repeater
@@ -78,3 +84,28 @@
     5. Keep sending request until cache gets hit and it's solved
 
 ---------------------------------------------------------------------------------
+
+#9 Lab: Web cache poisoning to exploit a DOM vulnerability via a cache with strict cacheability criteria
+
+    1. Capture GET / request
+    2. Add cache buster in request and check for headers in paraminer
+    3. Add new header "X-Forwarded-Host": exploit.id 
+    4. Add geolocate.js and geolocate.json in repeater 
+    5. In exploit change file type to json instead of javascript and in payload add
+      {
+    "country": "<img src=1 onerror=alert(document.cookie) />"
+     }
+    6. In head add Access-Control-Allow-Origin: * and change path to /resources/json/geolocate.json and store
+    7. First send the request with cache buster and then remove cache buster and keep sending until cache gets hit and it's solved
+
+
+---------------------------------------------------------------------------------------------------
+
+
+
+#9 Lab: URL normalization
+
+    1. Capture GET / request
+    2. Url encode / which gets converted into %2f and send the request
+    3. Append  <script>alert(1)</script> after %2f and send the request
+    4. Copy the url and deliver to victim and lab is solved.
