@@ -69,3 +69,11 @@ TIP:-         Test every entry point.
      1. try to break the sandbox with payload given in lab
 
 -------------------------------------------------------------------------------------------
+
+#8 Lab: Reflected XSS with AngularJS sandbox escape and CSP
+
+     1. Refer the cheatsheet below to bypass CSP 
+      https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
+
+
+-------------------------------------------------------------------------------------------
