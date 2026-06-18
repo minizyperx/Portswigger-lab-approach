@@ -61,3 +61,11 @@ TIP:-         Test every entry point.
            changeReq.send('csrf='+token+'&email=test@test.com')
 };
 </script>
+
+-------------------------------------------------------------------------------------------
+
+#7 Lab: Reflected XSS with AngularJS sandbox escape without strings
+
+     1. try to break the sandbox with payload given in lab
+
+-------------------------------------------------------------------------------------------
