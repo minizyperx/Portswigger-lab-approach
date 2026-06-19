@@ -77,3 +77,9 @@ TIP:-         Test every entry point.
 
 
 -------------------------------------------------------------------------------------------
+
+#9 Lab: Reflected XSS in a JavaScript URL with some characters blocked
+
+     1. Used arrow to implement throw statement then used the payload given in lab
+
+--------------------------------------------------------------------------------------------
