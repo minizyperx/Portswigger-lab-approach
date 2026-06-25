@@ -97,3 +97,13 @@ TIP:-         Test every entry point.
      8. In exploit server change csrf token to with victim's and email to given in lab question and lab is solved.
 
 ----------------------------------------------------------------------------------------------------------
+
+#11 Lab: Reflected XSS protected by CSP, with CSP bypass
+
+     1. xss is blocked by csp so use 
+     2. The injection uses the script-src-elem directive in CSP. 
+        This directive allows you to target just script elements. 
+        Using this directive, you can overwrite existing script-src rules enabling you to inject unsafe-inline, which allows you to use inline scripts. 
+     3. Enter the payload given in lab and lab is solved.
+
+------------------------------------------------------------------------------------------------------------
