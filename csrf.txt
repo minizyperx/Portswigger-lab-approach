@@ -107,4 +107,11 @@ Lax SameSite restrictions mean that browsers will send the cookie in cross-site 
 
 #9 Lab: SameSite Strict bypass via sibling domain
 
-    1. 
+    1. Do any chat and refresh the page 
+    2. Use payload given in lab 
+    3. Get sibling domain from resource/chat.js and try xss there
+    4. Change request method and in place of username enter the payload given in lab  and copy url
+    5. Paste the url in exploit server and under script tag and location= then deliver it
+    6. Visit the collaborator and poll until u get password in request 
+
+----------------------------------------------------------------------------------------------------------
