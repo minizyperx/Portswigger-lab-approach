@@ -137,3 +137,15 @@ IF a website is usign SAME-SIDE LEX then it also allows POST request but for onl
     4. Deliver exploit and lab is solved
 
 -----------------------------------------------------------------------------------------------------
+
+#12 Lab: CSRF with broken Referer validation
+
+    1. Login as wiener and send /change-email to repeater
+    2. The main idea is that in lab referrer we can add anything and it's getting accepted
+       eg:- https://www.google.com?lab.id....
+    3. generate CSRF POC and add 
+       history.pushState("", "", "/?YOUR-LAB-ID.web-security-academy.net") and in Head add Referrer-Policy: unsafe-url
+    4. Change email to any random email and deliver exploit and lab is solved
+
+
+-----------------------------------------------------------------------------------------------------
