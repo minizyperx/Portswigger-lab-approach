@@ -115,3 +115,13 @@ Lax SameSite restrictions mean that browsers will send the cookie in cross-site 
     6. Visit the collaborator and poll until u get password in request 
 
 ----------------------------------------------------------------------------------------------------------
+
+IF a website is usign SAME-SIDE LEX then it also allows POST request but for only 2 minutes
+
+#10 Lab: SameSite Lax bypass via cookie refresh
+
+    1. Login as wiener and send /change-email to repeater
+    2. In csrf poc add  a line below so that user is redirected to /social-login 5 sec after changing email
+    3. Deliver exploit and lab is solved cus the req will bring fresh cookie 
+
+--------------------------------------------------------------------------------------------------------------
