@@ -125,3 +125,15 @@ IF a website is usign SAME-SIDE LEX then it also allows POST request but for onl
     3. Deliver exploit and lab is solved cus the req will bring fresh cookie 
 
 --------------------------------------------------------------------------------------------------------------
+
+#11 Lab: CSRF where Referer validation depends on header being present
+
+    1. On removing referrer from request we can see that request is still being processed
+    2. Generate CSRF POC and add 
+    <head>
+    <meta name="referrer" content="no-referrer">
+    </head>
+    3. In head add another line Referrer-Policy:no-referrer
+    4. Deliver exploit and lab is solved
+
+-----------------------------------------------------------------------------------------------------
