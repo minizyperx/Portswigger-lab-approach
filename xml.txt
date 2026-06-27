@@ -74,4 +74,10 @@
 
 ---------------------------------------------------------------------------------------
 
-#9 Lab: 
+#9 Lab: Exploiting XXE to retrieve data by repurposing a local DTD
+
+     1. Check stock and send request to repeater.
+     2. Add the given payload after xml line and send request lab is solved.
+
+
+--------------------------------------------------------------------------------------
