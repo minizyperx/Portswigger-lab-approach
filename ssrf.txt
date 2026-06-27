@@ -56,3 +56,13 @@
 
 ---------------------------------------------------------------------------------------------
 
+Whitelisting means only allowing certain inputs and blocking all others. 
+Blacklisting means blocking certain inputs and allowing all others.
+
+#7 Lab: SSRF with whitelist-based input filter
+
+    1. Check stock and send the request to repeater.
+    2. Change stockapi value to http://localhost:80%2523@stock.weliketoshop.net/admin/ cus main domain is mandatory and send the request
+    3. Lab is solved and carlos is deleted
+
+-------------------------------------------------------------------------------------------------
