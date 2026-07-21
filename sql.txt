@@ -242,3 +242,11 @@ Theory:-  Error-based SQL injection refers to cases where you're able to use err
 
 -----------------------------------------------------------------------------------------------------
 
+#15 Lab: SQL injection with filter bypass via XML encoding
+
+       1. Send stock to repeater and change productid in that to 1 UNION SELECT NULL and check if stocks are zero or not
+       2. Change storeid to 1 UNION SELECT username || '~' || password FROM users and encode via hex entities from hexaverse extension and send the request
+       3. Then check the response and you will get the username and password of administrator in the response and login with that and you are logged in as administrator
+
+
+-----------------------------------------------------------------------------------------------
